@@ -54,5 +54,21 @@
     * Programmfehler
     * Zusammenspielfehler
     * Anforderungsfehler
-  * 
+  * Fehlerbehebung kann sehr teuer werden
+* analytische Qualitätssicherung: Code bereits fertig entwickelt und wird abschließend aus Fehler untersucht ([11], 2 Grundbegriffe der Qualitätssicherung, S 20)
+* konstruktive Qualitätssicherung: "Der Ansatz, bereits vor der Ausführung der eigentlichen Arbeit Qualitätsrichtlinien auszugeben" ([11], 2 Grundbegriffe der Qualitätssicherung, S 20)
+* "komplexer werdende Softwaresysteme in kürzerer Zeit zu verifizieren." ([10], 30.1 Künstliche Intelligenz, S 243)
+* Überwachung der produktiven Software in Echtzeit und Prognosen über zukünftige Veränderungen und Abweichungen ([10], 30.1 Künstliche Intelligenz, S. 243)
+* Testabdeckung steigern ([10], S. 243)
+* Nach risikobasiertem und agilem Testen bedeutet KI erneut ein Umdenken für Softwaretester ([10], S. 244)
+* "mit sinnvollen Daten [...] trainiert werden" ([10]. S. 244)
+* "KI wird nicht dazu führen, dass Tester überflüssig werden" ([10], S. 244)
+* Autonomiegrad in KI-gestützten Testen noch niedriger als bei anderen KI-Themen ([10] S 244)
+* Frage angebracht, ob Testautomatisierungstools das nicht bereits tun ([10] S 245)
+  * Automatisierung zu helfen 
+  * Aufwand an mühseligen Routinearbeiten beim Entwickeln und Testen zu verringern
+  * Tests für Entwickler durchzuführen und Ergebnisse zu liefern tun Tool schon
+  * aber dummes ausführen der tests
+  * Auf Codeänderung und anderen Metriken könnte KI nur notwendige Tests starten
+  * "Der Nutzen der KI resultiert daraus, dass die direkte Einbeziehung der Entwickler oder Tester in die besonders profanen Aufgaben reduziert wird." ([10], 30.2 Anwendungsbereiche künstlicher Intelligenz S. 245)
 * 
