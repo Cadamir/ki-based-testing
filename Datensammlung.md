@@ -43,7 +43,16 @@
    * Richtige Daten am Frontend 
    * Erscheinungsbild gesamt und einzelnelemente werden validiert
    * vergleicht aktuelle Screenshots mit originalen Screenshotes
-* API-Test
+* API-Test [1/3]
    * hohe Testabdeckung
    * geringe Komplexität
    * Testgenerierung 
+* Qualitätssicherung [11]
+  * "Aufgabe der Qualitätssicherung, jedwede Art von Fehlern vor der Auslieferung einer Software zu finden und das Auftreten von Fehlern beim Kunden zu vermeiden." ([11], 2.2 Konstruktive und analytische Qualitätssicherung, S. 19)
+  * Fehler kann nicht beobachtet werden -> nur Fehlverhalten -> daraus Fehler ableiten
+  * Fehler:
+    * Programmfehler
+    * Zusammenspielfehler
+    * Anforderungsfehler
+  * 
+* 
