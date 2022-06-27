@@ -82,6 +82,7 @@
   * Release Management
     * Planung/Konfiguration einzelner Software-Releases
 * ISTQB-Testprozess ([18] S. 2) 
+  * ISTQB = International Software Test Qualifikation Board
   * Planung/Steuerung
   * Analyse/Design
   * Realisierung/Durchführung
@@ -133,6 +134,13 @@
     * Auswertung
       * Analyse dieser Ergebnisse
       * teilweise Rückkehr zu älteren Phasen
-  * 
+* Warum tests? ([18] S. 7)
+  * komplexere Produkte
+    * viele Features
+    * viele Komponenten
+    * Verändungen haben viele Abhängigkeiten
+  * schnellere Produktzyklen
+  * stärkerer Wettbewerb
+  * verteilte Entwicklung
 
 
