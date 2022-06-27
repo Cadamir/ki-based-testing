@@ -19,3 +19,4 @@
 |[15]| Dipl. -Ing. Thomas Drilling / Stephan Augsten|2021|Qualitätssicherung mit Unit und Behaviour Testing Automatisierte Software-Tests mit KI |Test/KI|https://www.dev-insider.de/automatisierte-software-tests-mit-ki-a-1009622/|
 |[16]|Hussam Hourani; Ahmad Hammad; Mohammad Lafi|2019|The Impact of Artificial Intelligence on Software Testing|Test/KI|https://ieeexplore.ieee.org/abstract/document/8717439|
 |[17]|Josip Bozic; Oliver A. Tazl; Franz Wotawa|2019|Chatbot Testing Using AI Planning|Test/KI/Example| https://ieeexplore.ieee.org/abstract/document/8718222 |
+|[18]|Witte, Frank|2016 |Testmanagement und Softwaretest Theoretische Grundlagen und praktische Umsetzung| Test|Uni|yes|
