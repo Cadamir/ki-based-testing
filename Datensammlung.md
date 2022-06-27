@@ -71,4 +71,68 @@
   * aber dummes ausführen der tests
   * Auf Codeänderung und anderen Metriken könnte KI nur notwendige Tests starten
   * "Der Nutzen der KI resultiert daraus, dass die direkte Einbeziehung der Entwickler oder Tester in die besonders profanen Aufgaben reduziert wird." ([10], 30.2 Anwendungsbereiche künstlicher Intelligenz S. 245)
-* 
+* Softwaretest mehrere Phasen [18 S 1]
+* Testmanagement "erstreckt sich von der Testplanung über die Erstellung der Testspezifikation und Durchführung der Tests bis hin zur Protokollierung der Testergebnisse und der Auswertung der Tests" ([18], Der Testprozess, S. 1)
+  * Incident Management
+    * Reaktion auf erkannte/vermutete Störungen und vorbereitende Maßnahmen (ist organisatorischer/technischer Prozess) 
+  * Problem Management
+    * Ermitteln, Bewerten, Korrektur aufgetretener Fehler
+  * Change Management
+    * Bearbeitung zusätzlicher/geänderter Anforderungen während des Projektes
+  * Release Management
+    * Planung/Konfiguration einzelner Software-Releases
+* ISTQB-Testprozess ([18] S. 2) 
+  * Planung/Steuerung
+  * Analyse/Design
+  * Realisierung/Durchführung
+  * Auswertung/Bericht
+  * Abschluss
+  * überlappungen möglich 
+* Testprozess ([18] S. 2/3)
+  * Säulen ABC
+  * A. Fachliches KnowHow
+  * B. Methodik 
+  * C. Testwerkzeuge
+    * Testwerkzeuge = Hauptaugenmerk
+    * Testautomatisierung
+    * Tools für Testmanagement/Fehlermanagement
+  * Phasen (aus V-Modell)
+    * Planung
+      * Konzept
+      * Plan
+      * Beschreibung von 
+        * Testobjekt
+        * Testumgebung
+        * Konfiguration
+        * Testressourcen
+        * welche Tools
+        * Testumfang
+    * Design
+      * Verfeinerung des Planes
+      * Dokumentation von
+        * Anforderungen
+        * Szenarien
+        * Testkritierien
+      * (mgl. mit Planung zusammen)
+    * Spezifikation
+      * Beschreibung Testfälle im Detail
+        * Testvoraussetzungen
+        * erforderliche Eingaben
+        * erwartete Ausgaben
+        * Abhängigkeiten zwischen Testschritten
+      * funtionale und nicht funktionale Anforderungen
+    * Durchführung
+      * manuell und/oder automatisiert
+      * meist iterativ mit der Software-Entwicklung
+      * Regressionstests bei behobenen Fehlern
+      * Umfang wird meist im Laufe der Zeit größer
+    * Protokollierung
+      * Ergebnisse aufzeigen
+      * manuell: Checklisten, Berichte
+      * automatisiert: Log
+    * Auswertung
+      * Analyse dieser Ergebnisse
+      * teilweise Rückkehr zu älteren Phasen
+  * 
+
+
