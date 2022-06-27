@@ -60,8 +60,8 @@ Aufbau der Arbeit
 * Theoretische Grundlagen zum Tool darstellen
 * Vorteile/Nachteile herausfiltern
 * Einsatzmöglichkeiten aufzeigen
-* Tool(s) für Java raussuchen -> Proof-of-Concept
-* Tool(s) für Angular raussuchen -> Proof-of-Concept
+* Tool(s) für Java raussuchen/entscheiden -> Proof-of-Concept
+* Tool(s) für Angular raussuchen/entscheiden -> Proof-of-Concept
 * Bewertung/Beurteilung der aktuellen Marktlage
 * Weiterentwicklungsaussichten
 
