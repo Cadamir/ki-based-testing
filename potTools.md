@@ -1,7 +1,7 @@
 # potentielle Tools
 
-test.ai -> https://test.ai/all-products
-mabl -> https://www.mabl.com/
-IAV -> https://www.iav.com/was-uns-bewegt/mit-kuenstlicher-intelligenz-softwaretests-schneller-automatisieren/
-symflower -> https://symflower.com/en/
-applitools -> https://applitools.com/
+1. test.ai -> https://test.ai/all-products
+2. mabl -> https://www.mabl.com/
+3. IAV -> https://www.iav.com/was-uns-bewegt/mit-kuenstlicher-intelligenz-softwaretests-schneller-automatisieren/
+4. symflower -> https://symflower.com/en/
+5. applitools -> https://applitools.com/
