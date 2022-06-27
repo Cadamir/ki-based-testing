@@ -140,7 +140,9 @@
     * viele Komponenten
     * Verändungen haben viele Abhängigkeiten
   * schnellere Produktzyklen
+    * mehr Produkte in weniger Zeit
   * stärkerer Wettbewerb
+    * Globalisierung -> Vergleichbarkeit/Austauschbarkeit einfacher
   * verteilte Entwicklung
 
 
