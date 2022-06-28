@@ -144,5 +144,20 @@
   * stärkerer Wettbewerb
     * Globalisierung -> Vergleichbarkeit/Austauschbarkeit einfacher
   * verteilte Entwicklung
-
+* Test-reviewing [18] S. 13
+  * Neue Anforderungen
+  * erweiterte  Szenarien
+  * Tests kritisch betrachten, ergänzen, aktualisieren
+* Normen:  [18] S. 22
+  * IEEE 829 (S. 22)
+    * Übersicht -> Testkonzept
+    * Spezifikation
+      * Testentwurfspezifikation -> verfeinerte Beschreibung der Vorgehensweise
+      * Testfallspezifikation -> Eingabewerte, Ausgabewerte, ist vom Testdesign getrennt
+      * Testablaufspezifikation -> Beschreibung aller Schritte zur Durchführung von Testfällen, Implementierung des Testdesigns
+    * Bericht
+      * Objektübergabebericht -> Beschreibung Übergabe Testfälle, bei getrennter entwicklung
+  * ISO 9126 (S. 22-25)
+  * ISO IEC-29119 (S. 25-26)
+* 
 
