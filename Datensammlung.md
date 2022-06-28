@@ -157,7 +157,51 @@
       * Testablaufspezifikation -> Beschreibung aller Schritte zur Durchführung von Testfällen, Implementierung des Testdesigns
     * Bericht
       * Objektübergabebericht -> Beschreibung Übergabe Testfälle, bei getrennter entwicklung
+      * Testprotokoll -> Aufzeichnung
+      * Testabweichungsbericht -> Aufzeichnung nachprüfungswürdiger Ereignisse
+      * Abschlussbericht -> fasst Testaktivitäten zusammen
   * ISO 9126 (S. 22-25)
+    * Qualitätsziele: Zuverlässigkeit, Performance und Sicherheit -> durch Tests bestätigen
+    * Funktionalität -> "Vorhandensein der Funktionen mit festgelegten Eigenschaften" (S. 23)
+      * Angemessenheit -> Eignung für spezifizierte Aufgabe
+      * Korrektheit -> Richtige Rückgabewerte und Wirkungen
+      * Interoperabilität 
+      * Sicherheit
+      * Ordnungsmäßigkeit -> Merkmale zur Erfüllung von Vereinbarungen, gesetzl. Richtlinien, anwendungsspezifische Normen
+      * Konformität -> Einhalten von Standarts, Konventionen, gestzl. Bestimmungen u.ä.  
+    * Zuverlässigkeit -> Leistungsniveau unter festgelegten Bedingungen über einen festgelegten Zeitraum zu bewahren
+      * Reife -> seltenes Vesagen
+      * Fehlertoleranz -> Leistungsniveau halten trozt Software-Fehler/Schnittstellen-Nicht-Einhaltung
+      * Wiederherstellbarkeit -> Leistungsniveau wiederherstellen + Daten wiedergewinnen, Zeit und Aufwand berücksichtigen
+      * Konformität -> Grad, Normen oder Vereinbarungen zur Zuverlässigkeit einzuhalten
+    * Benutzbarkeit
+      * Verständlichkeit
+      * Erlernbarkeit
+      * Bedienbarkeit
+      * Attraktivität
+      * Konformität
+    * Effizints
+      * Zeitverhalten -> Antwort-/Verarbeitungszeit und Durchsatz
+      * Verbrauchsverhalten -> Ressourcenverbrauch, Anzahl/Dauer benötigter Betriebsmittel
+      * Konformität
+    * Änderbarkeit/Wartbarkeit
+      * Analysierbarkeit
+      * Modifizierbarkeit -> Aufwand von Verbesserungen, ...
+      * Stabilität -> Wahrscheinlichkeit des Auftretens unerwartert Abhängigkeiten
+      * Testbarkeit -> Aufwand für Testen nach Änderungen
+      * Konformität
+    * Übertragbarkeit
+      * Anpassbarkeit
+      * Installierbarkeit
+      * Koexistenz
+      * Austauschbarkeit
+      * Konformität
   * ISO IEC-29119 (S. 25-26)
+    * "definiert Testbegriffe, Testprozesse, Testdokumentation und einzelne Testtechniken" ([18] S. 25)
+    * ISO/IEC 29119-1: Concepts & Definitions
+    * ISO/IEC 29119-2: Test Processes
+    * ISO/IEC 29119-3: Test Documentation
+    * ISO/IEC 29119-4: Test Techniques
+    * ISO/IEC 29119-5: Keyword Driven Testing
 * 
 
