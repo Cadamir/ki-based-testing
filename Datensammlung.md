@@ -383,9 +383,61 @@
       * Regression: Mean Absolute Error, Mean Squared Error
       * Mean Squared Error (MSE): E = \frac{1}{n} * \sum_{i=1}^{n} (y_{i, soll} - y_{i,ist})^2
       * n = Anzahl (Trainings-)(Test-)beispiele  
-  * Anpassung der Gewichtung von hinten nach vorn (Backpropagation)
+  * Anpassung der Gewichtung von hinten nach vorn (Backpropagation) [5] S. 78
   * online-Anpassung: nach jedem Trainingsbeispiel
   * Batch-Anpassung: nach einer Gewissen Menge an Beispielen (Batch-Size)
   * Mini-Batch-Anpassung: Batch-Size < Anzahl Trainingsdaten
   * Epoche = kompletter Trainingsdurchlauf
-  * 
+  * Gradientverfahren [5] S. 79
+    * durch kleine Korrekturen Fehlerfunktion minimieren
+    * in Richtung des steilsten Abstiegs (Gradient)
+    * bei Iterationsschritt -> minimum überspringen
+    * multidimensionaler Raum
+    * verschiedene Algorithmen:
+      * SGD (Stachatic Gradient Descent)
+      * Momentum
+      * AdaGrad (Adaptive Gradient)
+      * AdaDelta
+      * Adam (Adaptie Movememnt Estimation)
+      * RMSprop (Root Mean Square Propagation)
+  * Datenaufbereitung
+    * Trainingsset
+      * Lernbeispiele
+      * interative Einspeisung
+      * Training
+      * ca. 80% aller Daten
+    * Validierungsset
+      * Schutz vor Overfitting
+      * zur Justierung von Hyperparameter (az. Schichten, az. Neuronone in Schicht, 
+      * wenn Fehler im Validierungsset nicht abnimmt -> Abbruch Training -> Early Stopping
+      * statt Validierungsset -> Kreuzvalidierung
+    * Testset
+      * für fertiges Modell
+      * zur Präzesionsberechnung des fertigen Modells
+      * ca. 20%
+  * Netzarchitekturen
+    * Full Connected Layer -> Jedes Neuron ist mit allen Neuronen er folgenden Schicht verbunden
+    * Convolutional Neural Network (CNN) [5] S. 91ff
+      * feedforward
+      * Klassifikation
+      * Bild/Video
+      * Input Layer 
+      * Convolution Layer -> Filter/Convolution -> Feature Map
+      * Activation Layer -> Aktivierungsfunkiton auf Feature Map
+      * Pooling Layer -> Dimension der Feature Map verringern (weniger Graustufen)
+      * Full Connected Layer -> auch mehrere Möglich
+      * Output Layer
+      * Eingabe -> (Feature Extraktion)* -> Klassenzuordnung -> Ausgabe (* beliebig oft wiederholbar)
+    * Rekurrente neuronale Netze (RNN) [5] S. 96ff
+      * für zeitlich abhängige Aufgaben
+      * für Aufgaben mit Gedächtnis/Kontex
+      * Spracherkennung, Textvervollständigugn, ...
+      * LSTMs (Long Short Term Memory) = spezialfall -> haben Zustandszellen
+      * feedback
+    * Gernerative Adversarial Networks (GAN) [5] S. 97
+      * neue Daten aus Trainingsdaten
+      * zwei Netze treten gegeneinander an (Generator vs. Diskriminator)
+      * Generator erzeugt neue Daten auf Basis des vorliegenden Datensets
+      * Diskriminator prüft in Echtzeit, ob neue Daten zum trainingsset passen
+    * weiter hier: https://www.asimovinstitute.org/neural-network-zoo/
+    * 
