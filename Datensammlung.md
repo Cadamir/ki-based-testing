@@ -203,5 +203,189 @@
     * ISO/IEC 29119-3: Test Documentation
     * ISO/IEC 29119-4: Test Techniques
     * ISO/IEC 29119-5: Keyword Driven Testing
-* 
-
+* KI [5]
+* Machine Learnig (ML) Teilgebiet KI [5] S. 18
+* Deep Learning (DL) Teilgebiet ML [5] S. 18
+* ML -> Strukturen erkennen aus dem Lösen vorgegebener Probleme, um diese Strukturen auf Anwendungen zu übertragen
+* Trainig: supervised Learning (SL), unsupvised Learning (UL), reinforcement Learining (RL) [5] S. 18
+* Traditionelle ML: Datenvorverarbeitung -> Merkmalextraktion -> Merkmalreduktion -> Modellentwicklung [5] S. 19
+* Daten: normalisiert, fehlerfrei, keine Verzerrung [5] S. 19
+* DL: End-to-End [5] S. 19
+  * keine Merkmalsextrakiton
+  * keine Problemdekomposition 
+  * orientierung an der Funktionsweise des menschlichen Gehirns [5] S. 67
+* KI Beispiele [5] S. 18 (Fußnote)
+  * ML
+  * Wissensrepräsentation
+  * logisches Schließen
+  * Planungsalgorithmen
+  * Suchalgorithmen
+  * regelbasierte Systeme
+  * fallbasiertes, nicht monotones Schließen
+  * Contrain-basierte Programmierung
+  * Optimierung
+* ML-Beispiele [5] S. 18
+  * DL
+  * Entscheidungsbäume
+  * Random Forest
+  * Support Vector Machines
+  * genetische Algorithmen
+* KI-Ziel: >= Performance wie menschlicher Experte, Arbeitet mit Wissen und Verstand [5] S. 33
+* Klassifiezierung von Programmen [5] S. 33-35
+  * Wissenbasierte Syteme: [5] S. 33
+    * hoher Entwicklungsaufwand
+    * leicht erklärbar
+    * Trennung Wissen und maschine
+    * menschlicher Entwickler braucht hohes Wissen
+  * regelbasierte Systeme: [5] S. 34
+    * Wissensbasis + Interfenzmaschine
+    * Wissenbasis enthält: Daten, Fakten, Regeln
+    * Interferenzmaschine wendet Regeln an, um neue Fakten zu generieren
+    * Manueller Aufbau/Wartung der Wissensbasis
+    * Regel: Prämisse (Wenn) und Konklusion (Dann)
+    * Regeln = Flaschenhals (ungenaue Definition, mehrere gleichzeitig anwendbar, ...)
+  * fallbasierte Systeme: [5] S. 34-35
+    * Lösen durch Erfahrungswerte
+    * ähnliche Probleme -> ähnliche Lösungen
+    * _retrieve_ -> Lösen mit vorhandenen Lösungen
+    * _reuse_ -> Lösungsansätze wiederverwenden
+    * _revise_ -> gefundene Lösungen anpassen
+    * _retain_ -> beste Lösung speichern
+* Lernen 2D kategorisierbar [5] S. 39
+  * Lernmodus
+    * SL
+    * UL
+    * Semi-SL
+    * RL
+    * Active Learning (AL)
+  * Problem
+    * Regression -> Kontinuierlichen Wert vorhersagen
+    * Klassifizierung -> Objekt in Gruppe einsortieren
+    * Clustering -> ähnliche Objekte zusammenfassen
+  * Matrix zur Einordnung entsteht
+* Supervised Learning [5] S. 39-41
+  * vorgeben, was gelernt werden soll
+  * Trainigspaar: Eingabe + erwartete Ausgabe
+  * erstellen eines Modells -> mit Trainingsdaten lernen -> mit neuen Daten arbeiten
+  * Beim lernen -> Rückgabe, wie korrekt eine Antwort war -> Anpassung des Modells
+  * Anpassung = Lernen
+  * Wiederholung der Anpassung bis Ergebnisse akzeptable sind oder sich nicht mehr ändern
+  * _Regression_ 
+    * kontinuierliche Daten vorhersagen
+    * mgl. statistische Methoden (lineare Regression, polynomiale Regression, multivariate Regression, ...)
+    * Einfluss von Variablen aufs Endergebnis
+    * Variablen sind unabhängig -> Features, Einflussgrößen
+    * Endergebnis -> Zielgröße
+    * Spezialfall: logisitische Regression (binäre Klassifikation) -> Ergebniss 1 oder 0
+  * _Klassifikation_
+    * Klassenzugehörigkeit zuordnen
+    * Abbildung von Merkmalen auf Diskrete Werte (Label)
+    * Klassen schon in der Trainingsphase bekannt
+  * _Zeitreihen_
+    * künftige Werte vorhersagen auf Basis von alten Werten
+    * zeitlich geordnete Werte
+    * Strukturen inhärent in einer Zeitreihe
+    * eine Art der Regression
+* Unsupervised Learning [5] S. 4
+  * vorhandene Daten explorieren und strukturelle Ähnlichkeiten identifizieren
+  * keine Beispiele vorhanden
+  * für große, unstrukturierte Datenmengen
+  * Ähnlichkeit innerhalb einer Gruppe maximieren
+  * typisch ist Clustering
+  * Regelsuche
+  * Zusammenhänge (wer das kaufte, kaufte zu X% auch dies)
+* Semi-supervised Learning [5] S. 42
+  * Mischform SL und UL
+  * Mischung gelabelter und ungelabelter Daten
+  * meist mehr ungelabelt als gelabelt
+  * Anfang training mit gelabelten Daten
+  * Lernperformanz erhöhen durch ungelabelte Daten
+* Reinforcement Learning [5] S. 42-44
+  * richtige Aktionen belohnen
+  * schlechte Aktionen bestrafen
+  * gut, wenn man Ergebnis gut einordnen kann, ohne den Weg vorzugeben
+  * sehr Ressourcen aufwendig -> Trial-and-Error -> sehr viele Wiederholungen
+* Aktives Lernen [5] S. 44
+  * aktivies semi-SL
+  * Entwickler klassifizerien ebenfalls Daten (unlabelt to labelt)
+* Daten zentrale Rolle [5] S. 46
+  * Ohne Daten kein Training
+* Neuronale Netze [5] S. 67-106
+  * Aus künstlichen Neuronen aufgebaut (wie Gehirn)
+  * mehrere Neuronen-Schichten
+  * 1943 Warren McCulloch und Walter Pitts -> erste Modellierung neuronaler Netze -> Neuron kann 0 und 1 oder kontinuierliche Werte mit Schwellenwerte
+  * künstliches Neuron = Perzeptron
+  * Dendrite/Eingabe = Eingabewerte
+  * Zellkörper = Berechnungsformel
+  * Axiom = Ausgabe
+  * inhibitorische/exzitatorische Eigenschaften = Gewichtungen
+  * Überschreiten eines Schwellenwertes durch Aktivierungsfunktion gesteuert
+  * Bias als Grundgewicht
+  * Bias + Eingabevektor = Gesamte eingabe für ein Perzeptron
+  * Eingaben -> Übertragungsfunktion -> Aktivierungsfunktion -> Ausgabe
+  * Übertragungsfunktion fasst die gesamte Eingabe zusammen
+  * Eingabewerte = n-dimensionale Vektor X mit Werten x_i
+  * zu jedem x_i -> w_i (Gewichtung)
+  * Übertragungsfunktion: a = \sum_{i=1}^{n} w_{i} * x_{i} + b [5] S. 69
+    * a = Ergebniss der Übertragungsfunktion
+    * n = Dimension des Eingabevektors
+    * w = Gewichtung
+    * x = Eingabewert
+    * b = Bias
+  * Aktivierungsfunktion: [5] S. 70
+    * Bekommt a von Übertragungsfunktion als Parameter
+    * Ergebniss = Ausgabe des Neurons
+    * verschiedene Funktionen mgl
+      * Identiätsfunktion x=y
+      * Heaviside-Funktion y = 0 -> x<0: 1 -> x >=0
+      * sigmoid = y = \frac{1}{1+e^{-x}}
+      * tanh()
+      * ReLU
+      * SoftsSign
+      * SoftMax
+  * Gewichtungsanpassung: [5] S. 70-71
+    * bei elemtaren Neuronen (Indentiätsfunktion)
+    * w_{i,new} = w_{i,old} + mykro * \frac{delta E}{delta w_{i}}
+    * w_{i,new} = w_{i,old} + mykro * (y_{i,soll} * y_{i,ist}) * x_{i}
+    * kann beliebig wiederholt werden
+    * mykro = Lernrate
+    * E = Fehlerfunktion
+  * mehrschichtige neuronale Netze [5] S. 71
+    * Eingabeschicht (Input Layer) -> stellen numerische Merkmalsvektoren dar, ein Neuron = ein Merkmal
+    * versteckte Schichten (Hidden Layers) -> Weiterverarbeitung, zB. Filteroperationen, mehr als 1 = tiefes Neuronales Netz
+    * Ausgabeschicht (output Layer) -> Zielwert
+  * vorwärtsgekoppelte Netze (feedforward)
+    * unidirektionale Verbindungen 
+    * von Input nach Output
+    * gerichteter, azyklischer Graph
+    * von einer Schicht zur nächsten
+    * niemals zurück
+  * rückgekoppelte Netze (feedback)
+    * Rückkopplungen zum direkten Vorgänger (direkte Rückkopplung)
+    * Rückkopplungen zu vorhergehenden Schichten (indirekte Rückkopplung)
+    * oft bei temporalen Aspekten oder bei Sequenzen
+  * Abbildung eines gegebenen Eingabevektors auf einen Ausgabevektor = Modell
+  * Lernprozess [5] S. 75/76
+    * Struktur des künstlichen neuronalen Netzwerkes (KNN) (nach Gefühl, nach bekannten Ansätzen)
+    * Hyperparameter festlegen (zB. Anzahl Trainingszüglen)
+    * zufällige Bestimmung der Gewichtungen und der Bias
+    * Trainigsdaten den Netzwerk geben
+    * Feed Forward der Daten
+    * Fehlerevaluation (zB. RMSE)
+    * Wenn kein Fehlerminimum und noch nicht die Maximale Trainingsrundenanzahl erreicht wurde, werden die Gewichtungen und der Bias angepasst, die Anzahl der trainierten Runden wird erhöht
+    * Wenn die Fehler minimiert oder die Maxtrainingsanzahl erreicht wurde -> Modell evaluierren -> Testdaten verwenden
+    * Fehlerbestimmung mit Testdaten -> Fehler ok = Modell nutzbbar, Fehler zu viele = Begin von vorn mit neuer Struktur
+  * = SL
+  * Fehlerfunktion [5] S. 76-77
+    * engl. loss function
+    * verschiedene Möglich
+      * Klassifikation: Categorical Crossentropy, Log Loss, Relative Entropy, Exponential loss
+      * Regression: Mean Absolute Error, Mean Squared Error
+      * Mean Squared Error (MSE): E = \frac{1}{n} * \sum_{i=1}^{n} (y_{i, soll} - y_{i,ist})^2
+      * n = Anzahl (Trainings-)(Test-)beispiele  
+  * Anpassung der Gewichtung von hinten nach vorn (Backpropagation)
+  * online-Anpassung: nach jedem Trainingsbeispiel
+  * Batch-Anpassung: nach einer Gewissen Menge an Beispielen (Batch-Size)
+  * Mini-Batch-Anpassung: Batch-Size < Anzahl Trainingsdaten
+  * Epoche = kompletter Trainingsdurchlauf
+  * 
