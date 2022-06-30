@@ -20,3 +20,8 @@
 |[16]|Hussam Hourani; Ahmad Hammad; Mohammad Lafi|2019|The Impact of Artificial Intelligence on Software Testing|Test/KI|https://ieeexplore.ieee.org/abstract/document/8717439|
 |[17]|Josip Bozic; Oliver A. Tazl; Franz Wotawa|2019|Chatbot Testing Using AI Planning|Test/KI/Example| https://ieeexplore.ieee.org/abstract/document/8718222 |
 |[18]|Witte, Frank|2016 |Testmanagement und Softwaretest Theoretische Grundlagen und praktische Umsetzung| Test|Uni|yes|
+|[19]|test.ai|2022|Test.ai Platform|Tool|https://test.ai/all-products [Zugriff: 30.06.2022]|
+|[20]|test.ai|2020|Test.ai Platform|Tool|https://static1.squarespace.com/static/61c565d1f94e5e0edb1471f3/t/61e85f5d0cbdf50a0c2def8c/1642618717726/testai_DataSheet_v4.0.pdf [Zugriff: 6:34]|
+|[21]|test.ai|2021|Test.ai Docs|Tool|https://docs.test.ai/ [Zugriff: 30.06.2022]|
+|[22]|mabl|2022|Mabl University|Tool|https://www.mabl.com/university [Zugriff: 30.06.2022]|
+|[23]|mabl|2022|Mabl Dokumentation|Tool|https://help.mabl.com/ [Zugriff: 30.06.2022]|
