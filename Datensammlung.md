@@ -47,6 +47,21 @@
    * hohe Testabdeckung
    * geringe Komplexität
    * Testgenerierung 
+* Alte QA-Welt [1/4]
+  * Bestandteile
+    * UI
+    * Peripherie (Bildschrim, Tastatur, Schreibpad, ...)
+    * Core-Software
+    * Schnittstellen zu "Umsoftware"
+    * Speicher
+  * Tests
+    * Unit-Tests
+    * System-Tests (ST)
+    * System-Integration-Tests (SST)
+  * funktionale Tests -> korrektes Ergebnis
+  * nicht-funktionale Tests -> Werte im Rahmen (Ladezeit, ...)
+  * User Akzeptanztests (UAT) -> Verwendbares Design/System für Nutzer
+  * Bei KI ändert sich nur Steuerung (Core-Software Steuerungskomponente)
 * Qualitätssicherung [11]
   * "Aufgabe der Qualitätssicherung, jedwede Art von Fehlern vor der Auslieferung einer Software zu finden und das Auftreten von Fehlern beim Kunden zu vermeiden." ([11], 2.2 Konstruktive und analytische Qualitätssicherung, S. 19)
   * Fehler kann nicht beobachtet werden -> nur Fehlverhalten -> daraus Fehler ableiten
@@ -55,6 +70,7 @@
     * Zusammenspielfehler
     * Anforderungsfehler
   * Fehlerbehebung kann sehr teuer werden
+* [1/4][1/5] -> es geht darum, wie eine KI gestestet werden kann und nicht, wie eine KI testet
 * analytische Qualitätssicherung: Code bereits fertig entwickelt und wird abschließend aus Fehler untersucht ([11], 2 Grundbegriffe der Qualitätssicherung, S 20)
 * konstruktive Qualitätssicherung: "Der Ansatz, bereits vor der Ausführung der eigentlichen Arbeit Qualitätsrichtlinien auszugeben" ([11], 2 Grundbegriffe der Qualitätssicherung, S 20)
 * "komplexer werdende Softwaresysteme in kürzerer Zeit zu verifizieren." ([10], 30.1 Künstliche Intelligenz, S 243)
