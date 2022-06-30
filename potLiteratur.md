@@ -27,3 +27,5 @@
 |[23]|mabl|2022|Mabl Dokumentation|Tool|https://help.mabl.com/ [Zugriff: 30.06.2022]|
 |[24]|Hussam Hourani, Ahmad Hammad, Mohammad Lafi|2019|The Impact of Artificial Intelligence on Software Testing|Paper|yes|
 |[25]|Zubair Khaliqa, Sheikh Umar Farooqa, Dawood Ashraf Khana|2022|Artificial Intelligence in Software Testing : Impact, Problems, Challenges and Prospect|Paper|yes|
+|[26]|Wolfgang Ertel|2016 (4. Auflage)|Grundkurs Künstliche Intelligenz Eine praxisorientierte Einführung|DHBW Uni|yes|
+|[27]|Gerhard Paaß, Dirk Hecker| 2020|Künstliche Intelligenz Was steckt hinter der Technologie der Zukunft|DHBW Uni|yes|
