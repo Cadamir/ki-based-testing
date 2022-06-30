@@ -25,3 +25,5 @@
 |[21]|test.ai|2021|Test.ai Docs|Tool|https://docs.test.ai/ [Zugriff: 30.06.2022]|
 |[22]|mabl|2022|Mabl University|Tool|https://www.mabl.com/university [Zugriff: 30.06.2022]|
 |[23]|mabl|2022|Mabl Dokumentation|Tool|https://help.mabl.com/ [Zugriff: 30.06.2022]|
+|[24]|Hussam Hourani, Ahmad Hammad, Mohammad Lafi|2019|The Impact of Artificial Intelligence on Software Testing|Paper|yes|
+|[25]|Zubair Khaliqa, Sheikh Umar Farooqa, Dawood Ashraf Khana|2022|Artificial Intelligence in Software Testing : Impact, Problems, Challenges and Prospect|Paper|yes|
