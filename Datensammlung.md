@@ -440,4 +440,67 @@
       * Generator erzeugt neue Daten auf Basis des vorliegenden Datensets
       * Diskriminator prüft in Echtzeit, ob neue Daten zum trainingsset passen
     * weiter hier: https://www.asimovinstitute.org/neural-network-zoo/
-    * 
+* test.ai [19]
+  * Tool erforscht selbst die Anwendung
+  * interagiert automatisch mit der Anwendung
+  * erkennt Zustände, Elemente und Wege
+  * Benennung von Zuständen und Elementen
+  * überprüft alle Features
+  * generierung von KI-baiserten Modellen zur Erkennung von Zuständen u. Elementen u. automatischer Navigation
+  * erforscht die Anwendung im Test, um neue Bereiche zu finden
+  * Test-Creation
+    * ML
+    * visuelles Wiederfinden von Elementen
+    * Test-Composer -> Test-Bot beaufsichtigen und steuern
+    * Test in Echtzeit erstellen
+  * hochskalierbar
+  * Optische Ergebnis-Aufbereitung
+* test.ai
+  * Elemente müssen nicht mehr explizit angegeben werden, sondern werden überr ML erkannt
+  * kein XPath, CSS, ...
+  * Screenshots bei jedem Schritt
+  * Schritte sind auf dem Screenshot hervorgehoben
+  * reinforcement learning
+  * Python-Skripte mgl.
+  * Human-Interface
+    * Bot Training -> Interfaces benennen
+    * Test Spezifikation
+    * Bot Configuration
+    * Analytics
+    * Knowledge Base
+  * Application Interaktion
+    * Exploration
+    * Test-Ausführung
+  * Cortex: ML Brain
+    * Objekt Lokalisierung
+    * Objekt Klassifizierung
+    * Lernen
+  * Device Interaktion
+    * Sensoren -> Objekt Modell, Bildaufnahme, Videoaufnahme
+    * Aktoren -> Maus, Tastatur, Touch, Gamepad
+  * Supportet Plattforms
+    * Laptop, Computer, Mobile, Apple, Android, PS4, XBox, Switch
+* test.ai [21]
+  * Workflow
+    * Collect Data
+    * Classify Data
+    * Train AI
+    * Create Tests
+    * Run Tests
+    * Review Results
+  * AI-Usage
+    * Crawl UI -> UI durchsuchen/Browsen
+      * Q-Learning
+      * Lernen zu navigieren von Seite zu Seite
+      * Erstellen eines App-Graphen -> Finden des besten Weges oder eines Ersatzweges
+    * sehende Roboter
+      * keine Element-Pfade/-Locators
+      * Visual Detection um Elemente zu erkennen
+      * erkannte Elemente müssen dann benannt werden (vom Tester)
+      * Neuronales Netz wird dann darauf trainiert
+      * Bots können menschliche Interaktionen nachstellen
+      * desto größer die Unterschiede beim Training, desto allgemeiner wird die KI
+    * Objektklassifizierung
+      * Nutzen von bekannten Icons/Buttons allgemein
+      * Nutzen von speziell für die eine App trainierte Buttons
+* download von test.ai zurzeit scheinbar nicht mgl. 
