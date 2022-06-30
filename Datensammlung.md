@@ -504,3 +504,65 @@
       * Nutzen von bekannten Icons/Buttons allgemein
       * Nutzen von speziell für die eine App trainierte Buttons
 * download von test.ai zurzeit scheinbar nicht mgl. 
+* mabl [22]
+  * Workspace
+    * Oberfläche des Testers
+    * vereint alle weiteren Punkte in sich
+    * jeder Entwickler hat eigenen Workspace
+    * ein Workspace mit vielen Enviorments
+    * Dashboard
+      * 'status-check'
+      * aktuelle Nutzungszahlen
+      * Navigation zu anderen Komponenten
+  * Enviroment
+    * Umgebungen
+    * Test, Abnahme, Produktion, ...
+    * kann Umgebungsvariablen nutzen
+    * Umgebungsvariablen von allen Tests der Umgebung nutzbar
+  * Application
+    * dargestellt mit ihren URLs
+    * Eine Applikation kann merheren Umgebungen zugeordnet werden
+    * in Configuration erstellbar
+  * Plan
+    * mehrere Tests für einen Bereich der App
+    * gibt an, wie automatisiert werden soll
+    * ein Plan hat nur eine App
+    * eine App hat mehrere Pläne
+  * Test
+    * Menge von Schritten um eine Funktionalität zu definieren
+    * für kleine Bereiche/einzelne Features
+    * Ein Test kann zu mehreren Plänen gehören
+    * Im Test-Bereich
+      * Details: Einzelschritte
+      * Verlauf
+      * zugeordnete Plänge
+      * Testveränderung im Laufe der Zeit
+  * Test Result -> viele Informationen
+  * Elemtsuche
+    * Standart
+      * Element auswählen
+      * Informationen darüber sammeln
+      * Beim Test Element mit bester Übereinstimmung
+    * Konfigurierte
+      * einstellbar, welche Attribute am wichtigsten sind
+      * Suchstrategie veränderlich
+    * warten und warten
+      * Es kann gewartet werden 
+      * statische Zeitspanne gewartet
+      * warten bis ein Element ein gewisses Attribut hat
+    * Pfad-Selektoren
+      * CSS, XPath
+      * zusätzliche Kontrolle
+      * keine Selbstheilung
+    * Vorteile: 
+      * Selbstheilung
+      * Änderungsrobust
+      * Vielseitig
+  * Selbstheilung
+    * Bei jeder Interaktion mit Element -> Speichern der Attribute fürs nächste Finden
+    * über 30 Attribute
+    * Finden: suche das ähnlichste Element
+    * Suche: 1. Kandidaten raussuche -> bester Kandidat
+    * Erstmal warten wenn nichts gefunden wurde
+    * Wenn kein eindeutiger Kandidat gefunden wurde -> Ausprobieren -> Erfolg: Test pass, überschreiben der Infos <-> Misserfolg: Test error, Autoheal versuch in Log, Fehlerzeigen
+    * Ad-hocs tests verändern keine gespeicherten Informationen
