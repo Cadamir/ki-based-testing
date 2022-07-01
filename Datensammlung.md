@@ -665,4 +665,35 @@
     * ein Input Layer
     * n Hidden Layer
     * ein Output Layer
-  * 
+  * Unsupervised Learning - Lernen ohne Labels [2] S. 218
+    * Strukturen erkennen -> Beziehungen/Gruppierungen
+    * Clustering
+      * "einfachste Struktur" ([2] S. 218)
+      * Cluster mit höherer internen Ähnlichkeiten
+      * verschiedene Ähnlickeitsermittlungen (zB. Euklidische Distanz)
+      * k-mean-Cluster -> zufällige Aufteilung von Punkten in einzelne Cluster -> die sich ähnlichsten Cluster zusammenfassen + neuer Durchschnittswert für weitere Rechnung -> Schritt 2 ...
+    * Manifolding Learning
+      * kein zwingendes Clustern
+      * erstellen einer Metrik um Beziehungen darzustellen
+      * Metrik notwendig für k-mean-Clustering
+      * Metrik zB Euklidische Distanz
+      * Metriken können unterschiedlich sein
+    * Generative Modelle
+      * Modelle, welche realistische Daten erstellen können
+      * eine unterliegende, aber nicht beobachtbare Verteilung
+      * explizites Dichtemodell schätzt diese zugrundeliegende Verteilung (Gaußschen Mischungsmodell (GMM))
+      * implizites Dichtemodell: Beispiele ersetllen, welche nicht mehr von testdaten unterscheidbar sind
+  * Reinforcement Learning [2] S. 221
+    * keine Trainingsdaten notwendig
+    * kreiert einge Trainingsdaten durch Interaktion mit Umfeld
+    * Belohnung für gute Ergebnisse
+    * Bestrafung für schlechte Ergebnisse
+    * learning by doing
+    * Agent = ein Individuum, ein Modell
+    * Agent Bewegung in Zeitsteps
+    * Agent hat Zustand und Aktionspalette
+    * je nach Zustand muss eine Aktion ausgewählt werden
+    * Neuer Zustand basiert auf Aktion und Umgebungseinfluss
+    * Sammeln von Belohnungen um die größtmögliche Belohnung zu erhalten
+    * Verhältnis exploration und exploitation
+    * TODO 244, 317 347 519
