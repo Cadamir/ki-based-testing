@@ -582,3 +582,87 @@
     * Erstmal warten wenn nichts gefunden wurde
     * Wenn kein eindeutiger Kandidat gefunden wurde -> Ausprobieren -> Erfolg: Test pass, überschreiben der Infos <-> Misserfolg: Test error, Autoheal versuch in Log, Fehlerzeigen
     * Ad-hocs tests verändern keine gespeicherten Informationen
+* ML [2] S. 201
+  * kein Rule-Set programmieren
+  * Regeln lernen von Beispielen
+  * zB. kein Hand-erstellter Decision-Tree
+  * Modell macht vorhersagen
+  * Grundlage sind "Beobachtungen" und Vorhersagewert
+  * Merkmalsextraktion ist wichtig
+    * Handerlesene Merkmale  
+      * Daten von Experten in Merkmale aufgeteilt
+      * Wichtige Merkmale erhalten lassen
+      * Unwichtige/Störende Merkmale entfernen
+      * Wenn ein bekannter/starker Zusammenhang zwischen einen Merkmal und Ergebnis besteht: Nutze das Merkmal
+    * Algorithmische Merkmalsextraktion
+      * Algorithmus unterscheidet wichtige von unwichtigen Merkmalen
+      * unvariante Merkmalsextraktion -> Merkmale einzeln betrachten
+      * multivariante Merkmalsextraktion -> Merkmale im Zusammenhang
+    * Algorithmische generierung von Merkmalen
+      * Extraktor durch Trainingsdaten trainiert
+      * keine Beschränkung auf bestimmtes Merkmalsvokabular
+  * Nearest Neighbor -> sehr Empfindlich bei unnötigen Merkmalen
+  * Support Vektor Machine -> sehr Empfindlich
+  * Verbesserung -> robust gegen uninformative Merkmale
+    * boosting Models (zB. AdaBoost)
+    * bagging Models (zB. RandomForest)
+  * schwache Lerner (weak learners) genutzt -> Zusammenschluss der schwachen erstellt Vorhersage
+  * verschiedene Teilmengen der Trainingsdaten werden für verschiedene schwache Lerner genutzt
+  * schwache Lerner die keine Ahnung von Problem haben -> gleichmäßig verteilte unterschiedliche Ergebnisse -> gleichen sich aus
+  * schwache Lerner mit Ahnung -> stimmen fürs selbe -> leichte Erhöhung an der richtigen Stelle
+  * Klassifizierungsmodelle: [2] S. 206f
+    * k-Nearest Neighbors -> Merkmale eines Objektes zu Vektor/Punkt -> Abstand zu allen anderen Punkten/Objekten -> k kürzeste Abstände Punkte werden die Klassen gezählt -> häufigste Klasse = eigene Klasse
+    * Suport Vector Machine:
+      * ermittelt relative Dichte
+      * Support Vektoren werden ermittelt
+      * Vectoren sind ähnlich zu den Grenzen (Borders) im Merkmals-Raum
+      * Vektoren haben den maximalen Abstand zueinander
+      * Hyperplane wird zwischen den Vektoren erstellt
+      * Hyperplane hat eine Dimension weniger als der eigentliche Merkmalsraum
+    * Entscheidungsbäume
+      * Klassifikation
+      * Reihe von Entscheidungen
+      * Jede Verzweigung = ein Merkmal
+      * Schlussendlich -> Blatt = Klasse
+      * kein kontinuierlicher Vektorraum notwendig/mgl
+      * Alle Merkmale werden als diskrete Werte betrachtet
+      * Kategorische Merkmale gehen je nach Kategorie in andere Äste
+      * Skalare Werte -> Schwellenwert(e) zur Unterscheidung
+      * sehr anfällig für Overfitting/Overtraining
+  * Ensemble Modelle [2] S. 209ff
+    * -> durch viele einfache Modelle
+    * -> einzelnes Modell oft nur mit Teil-Trainingsdaten trainiert
+    * -> einfaches Modell = schwache Lerner (weak Learners)
+    * -> einzelne Vorhersagen zusammen eine gemeinsame
+    * geringe Variance: -> ähnliche/gleiche Ergebnisse bei ähnlichen/gleichen Problemen
+    * geringer Bias: -> nah an der Wahrheit
+    * Bias/Verzerrung: Eine falsche Schätzung der Modellparameter, so dass sie nicht die tatsächliche Verteilung der Stichprobendaten widerspiegeln. ([2] S. 211, Übersetzt mit DeepL)
+    * Varianz: Die Varianz der Vorhersage, die entsteht, wenn das Modell die Verteilung der Trainingsdaten gut wiedergibt, aber die Generalisierung auf neue Daten leidet. ([2] S. 211, Übersetzt mit DeepL)
+    * Overfitting:  Das Modell folgt der Verteilung der Trainingsdaten in einem Maße, das seine Genauigkeit bei neuen Daten verringert. ([2] S. 211, Übersetzt mit DeepL)
+    * Underfitting: Das Modell spiegelt die Verteilung der Trainingsdaten nicht angemessen wieder. ([2] S. 211, Übersetzt mit DeepL)
+    * Random Forest 211ff
+      * begging (hoffen das es klappt?)
+      * weak Learners (WL)
+      * sehr simple
+      * Entscheidung aufgrund einer Teilmenge der Merkmale
+      * Trainiert mit Teil-Trainings-Sets
+      * Weak Learners = decision Trees
+      * Abstimmung entscheidet das finale Ergebnis
+    * AdaBoost S, 215
+      * boosting
+      * Kaskade einfacher Klassifikationsmodelle
+      * random Subset of Trainingdata -> trainiere ersten WL -> neues Trainingsset (ein Teil zufällig, ein Teil, wo erster WL schlecht war) -> 2. WL training -> ...
+  * Neural Networks [2] S. 215
+    * an Gehirn angelehnt
+    * 2 Mechanismen
+      * 1. Vereinigen von vielen Eingaben 
+      * 2. eine nicht lineare interne Ausgabefunktion
+    * Eingaben gewichtet
+    * gewichtete Eingaben summiert (+ Bias)
+    * -> kontinuierliches Mappen & Klassifizieren
+    * Lernen = Anpassen von Weights und Bias
+    * aneinanderhängen und Schichten aufbauen -> artifical neural network (ANN)
+    * ein Input Layer
+    * n Hidden Layer
+    * ein Output Layer
+  * 
