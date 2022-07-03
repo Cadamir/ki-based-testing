@@ -696,4 +696,57 @@
     * Neuer Zustand basiert auf Aktion und Umgebungseinfluss
     * Sammeln von Belohnungen um die größtmögliche Belohnung zu erhalten
     * Verhältnis exploration und exploitation
-    * TODO 244, 317 347 519
+  * Neural Network (DL)
+    * 2010 hoch -> Rechenpower + Graphikkarten eigenen sich gut, Verfügbare Daten, Algorithmen haben einen Durchbruch gehabt
+    * CNN [2] S. 224f
+      * Mehrschichtig
+      * viele Verbindungen ausgelassen -> Filtern der Eingabe
+      * häufiges Filtern und Gewichten
+      * Filter werden über das gesamte Netz wiederverwendet
+      * Nachbarschaft ist wichitg -> Input Filter nur zu wenigen anderen Verbunden
+      * Reduktion der Möglichkeiten
+      * Viele Schichten welche selbst simpel sind -> ähnlich zu Bagging 
+    * Recurrent Neural Networks (RNN)
+      * für sequenzielle Daten
+      * Input + Hidden + Output
+      * Eingabe + Aktueller Zustand des Netzwerkes = Ausgabe
+      * gut für Kontext
+      * Nutzen von Short-Term-Memory und Long-Term-Memory [2] S. 228f
+        * nicht nur alten Status als Input
+        * auch alten Output
+        * auch aktuellen Input
+        * alles in sich gewichtbar
+    * Autoencoder
+      * mehrerer Verschlüsselungsschichten (encoder-Layers)
+      * Input wird zu niedrig Dimensionalen Repräsentation
+      * Decoder "entschlüsselt" Repräsentation
+      * Training = Differenz von Input und Entschlüsseltem Output minimieren
+      * Fehlerfunktion während des Lernens anpassen (nicht nur beim Autoencoder)
+    * Generative Adversarial Networks (GAN)
+      * Generiert Daten ununterscheidbar von echten Daten
+      * Input = sampling Vector
+      * deconvolution & upscaling
+      * Discriminator -> Versucht zu erkennen, was echt und was falsch ist (Benötigt echte und gefakte Trainingsdaten)
+      * steigern sich beide
+      * mode collapse -> nur noch wenige Beispiele 
+      * Catch me if you can -> ein Beispiel solange bis es erkannt wird, dann nächstes Beispiel
+      * mgl. statt korrekt und falsch -> einen Kritikwert
+* Computer Vision[2] S. 317
+  * Informationen aus Visuellen Daten erhalten
+  * Analysierbar/bearbeitbar machen
+  * Menschliche Sicht nachspielen
+  * erkennen, verfolgen, Bewegungsanalyse, text erkennung
+  * eng verwandt mit Image processing
+    * Bildverbesserung
+    * Bildkomprimierung
+    * Merkmalserkennung
+    * Bildverschmelzung
+  * Kantenerkennung
+    * Helligkeitsuneinheitlichkeiten
+    * Unkontinuierlichkeiten in der Tiefe
+    * Unkontinuierlichkeiten bei Oberflächen
+    * Wechsel in Textur/Material
+    * Beleuchtungsunterschiede
+    * Search-Based -> Extrema der Intensität der Änderung (Ableitung) -> Gradienten
+    * Zero-Crossing-Based -> Extram in Änderung + Wendepunkt der 2. Ableitung 
+* TODO 317 347 519
