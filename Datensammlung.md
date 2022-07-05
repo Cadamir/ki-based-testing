@@ -749,4 +749,56 @@
     * Beleuchtungsunterschiede
     * Search-Based -> Extrema der Intensität der Änderung (Ableitung) -> Gradienten
     * Zero-Crossing-Based -> Extram in Änderung + Wendepunkt der 2. Ableitung 
-* TODO 317 347 519
+* Vertrauenswürdige AI [2] S. 519
+  * Guidelines S. 520
+    * OECD Principles of AI
+      * Inclusive growth, sustainable development and well-being ([2] S. 521) -> Verbesserung menschlicher Fähigkeiten, Verringerung Ungleichheiten, UmweltSchutz
+      * Human-centred values and fairness ([2] S. 521) -> Achten von Rechtsstaat, Menschenrechte, Freiheit, Würde, Autonomie, Privatsphäre, Datenschutz, Nichtdiskriminierung
+      * Transparency and explainability ([2] S. 521) -> offenlegen von Infos, Nachvollziehbarkeit und Anfechtbarkeit von KI-Ergebnissen
+      * Robustness, security and safety ([2] S. 521) -> Datensäzte, Entscheidungen, Prozesse Rückverfolgbar; IT-Sicherheit
+      * Accountability ([2] S. 521) -> Entwickler + User sind verantwortlich für KI
+    * UNESCO Recomondation of the Ethics of AI 
+    * UNICEF Policy Guidance on AI for Children
+    * EU HLEG Guidelines for Trustworthy AI
+      * Human agency and oversight ([2] S. 521) -> Including fundamental rights, human agency, human oversight. 
+      * Technical robustness and safety ([2] S. 521) -> Angriffsrobustheit, Ausweichpläne, Reproduzierbarkeit, Genauigkeit, Zuverlässigkeit
+      * Privacy and data governance ([2] S. 521) -> Datenschutz, Datenqualität, Datenintegrität, Datenzugriff
+      * Transparency ([2] S. 521) -> Nachverfolgbarkeit, Erklärbarkeit, Kommunikaiton
+      * Diversity, non-discrimination and fairness ([2] S. 521) -> Verzerrung vermeiden, Zugriff, Universelles Design, Stakeholder-Teilhabe 
+      * Societal and environmental wellbeing ([2] S. 521) -> Unweltschutz, Sozialer Einfluss, Nachhaltigkeit
+      * Accountability ([2] S. 521) -> Verantwortungsaufteilung, Berichten negativer Ergebnisse 
+    * EU White Paper on AI
+  * Richtlinien
+    * IEEE Ethically Aligned Design: https://ethicsinaction.ieee.org/#series
+    * ISO/IEC Standards on AI and Trustworthy AI:https://www.iso.org/committee/6794475.html
+    * NIST Standards for Trustworthy and Responsible AI: https://www.nist.gov/programs-projects/trustworthy-and-responsible-ai
+    * CEN-CENELEC Committee on Artificial Intelligence: https://www.cencenelec.eu/areas-of-work/cen-cenelec-topics/artificial-intelligence/
+  * Regulierungen
+    *  EU Digital Strategy: https://ec.europa.eu/info/strategy/priorities-2019-2024/europe-fit-digital-age_en
+    *  GDPR: https://ec.europa.eu/info/law/law-topic/data-protection/data-protection-eu_en
+    *  DSA: https://ec.europa.eu/info/strategy/priorities-2019-2024/europe-fit-digital-age/digital-services-act-ensuring-safe-and-accountable-online-environment_en
+    *  DMA: https://ec.europa.eu/info/strategy/priorities-2019-2024/europe-fit-digital-age/digital-markets-act-ensuring-fair-and-open-digital-markets_en
+    *  EU Draft AI Act: https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence
+  * 
+*  Teilhaber [2] S. 524
+  * Data provider -> Sammeln, Bearbeiten, Liefern von Daten
+  * AI Provider
+    * Management
+    * "Legal department/Corporate responsibility department"
+    * Datenschutz 
+    * Systemarchitekt/Data Engineer
+    * Entwickler
+    * Quality
+  * AI User
+    * Management
+    * "Legal department/Corporate responsibility department"
+    * Qualität
+    * Datenschutz
+    * System Architekt
+    * Menschliche Ressourcen
+    * Beschaffung
+    * direkte Nutzer/wegautomatisierte Arbeiter
+  * AI Objekt -> Objekt, über welches Vorhersagen getroffen werden
+  * Certifikation Body -> Bescheinigung eingehaltener Standarts
+  * Regulator -> Leistungskritieren festlegen, 
+  * "Broader society, including for example human rights organizations, consumer protection organizations, envirnomental protection organizations, and media" S. 525 
