@@ -779,7 +779,32 @@
     *  DSA: https://ec.europa.eu/info/strategy/priorities-2019-2024/europe-fit-digital-age/digital-services-act-ensuring-safe-and-accountable-online-environment_en
     *  DMA: https://ec.europa.eu/info/strategy/priorities-2019-2024/europe-fit-digital-age/digital-markets-act-ensuring-fair-and-open-digital-markets_en
     *  EU Draft AI Act: https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence
-  * 
+  * Transparenz [2] S. 533
+    * Informationen über Training, genutzte Merkmale, Trainingsmethoden, Performance, ...
+    * erhöhen der Transparenz/Verantwortungsverteilung
+    * leichtere Reproduzierbarkeit
+    * Biases leichter erkennbar
+    * Dokumentation soll folgendes beantworten:
+      * Why is the data being collected? Who requested/funded the data collection, and for what purpose?
+      * What is the composition of the data set (for example, does it contain tabular data, or text data? Multi-modal data?)
+      * How was the data collected? What sampling procedure, why was that method chosen, and sampled from which population?
+      * Was the data labelled? If so, by whom?
+      * What were the pre-processing steps?
+      * What are the results of the Exploratory Data Analysis? (For example, how many items, how many features, correlations, sensitive characteristics, etc.)
+      * What are the intended uses of this data set, and are there uses to avoid?
+      * Will the data set be distributed? If so, how?
+      * Who is repsonsible for the maintenance of the data set?
+    * Model-Dokumentation
+      * Basic logistic information about the model, such as person or organization developing it, licenses, and where to send questions or bug reports..
+      * Basic descriptions of the training algorithms, the model parameters, optimization function, fairness constraints, and features.
+      * Intended use, in particular optimal uses, primary intended users, and use cases to avoid.
+      * Under which conditions – for example, using which target populations; if audio/visual input is required, which kind, and under what environmental conditions – the model performance has been tested.
+      * Which metrics were used to measure model performance? Which fairness metrics? What decision thresholds were used?
+      * Details on the training and test data (see Documenting the data section above)
+    * Erklärbarkeit
+      * Feature summary statistics: Merkmalsgewichtung, Beziehung Merkmal-Vorhersage
+      * Feature summary visualization: Grafische Merkmals-Vorhersage-Beziehungs-Ausgabe
+      * Model internals: Gewichtungen, Bäume, ...
 *  Teilhaber [2] S. 524
   * Data provider -> Sammeln, Bearbeiten, Liefern von Daten
   * AI Provider
