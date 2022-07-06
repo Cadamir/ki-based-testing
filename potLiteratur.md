@@ -29,3 +29,5 @@
 |[25]|Zubair Khaliqa, Sheikh Umar Farooqa, Dawood Ashraf Khana|2022|Artificial Intelligence in Software Testing : Impact, Problems, Challenges and Prospect|Paper|yes|no|
 |[26]|Wolfgang Ertel|2016 (4. Auflage)|Grundkurs Künstliche Intelligenz Eine praxisorientierte Einführung|DHBW Uni|yes|no|
 |[27]|Gerhard Paaß, Dirk Hecker| 2020|Künstliche Intelligenz Was steckt hinter der Technologie der Zukunft|DHBW Uni|yes|no|
+|[28]|IAV|2020|Mit Künstlicher Intelligenz Softwaretests schneller automatisieren|https://www.iav.com/was-uns-bewegt/mit-kuenstlicher-intelligenz-softwaretests-schneller-automatisieren/ [Zugriff: 06.07.2022]|yes|yes|
+[29]|Symflower GmbH|2022|Symflower|https://symflower.com/en/[Zugriff: 06.07.2022]|yes|no|

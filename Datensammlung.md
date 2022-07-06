@@ -970,4 +970,27 @@
         * kein umfassendes Strategieentwicklungstool -> nur Kennzahlen
         * zu ungenau für Kosten-Leistung-Rechnung
         * nicht alle Kennzahlen
-      * 
+* IAV [28]
+  * übernimmt automatisiert die Erstellung von Testskripten aus manuellen Testbeschreibungen
+  * Teil eines Modularen Baukastens
+  * Automatierung nicht leicht -> Expertenwissen + Programmierkenntnisse
+  * Permanente Testanpassungen
+  * lernen aus bekannten Testfallbeschreibung-Skript-Tupels
+  * Bestimmung vieler UI-Elemente aus Testbeschreibung
+  * Problem: Tippfehler, Multi-Label, ...
+  * Effizienz von Testern steigern, nicht ersetzen
+* Symflower [29]
+  * Integration in den Workflow
+  * generierung "high-coverage" Unit-Tests
+  * IDEs
+    * IntelliJ
+    * Visual Studio Code
+    * Goland
+    * Android Studio
+    * CLI
+  * Echtzeit Rückmeldungen
+  * Languages
+    * Go
+    * Java
+  * keine Integrations-/Systemstests
+  * 
