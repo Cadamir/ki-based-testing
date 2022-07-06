@@ -827,3 +827,147 @@
   * Certifikation Body -> Bescheinigung eingehaltener Standarts
   * Regulator -> Leistungskritieren festlegen, 
   * "Broader society, including for example human rights organizations, consumer protection organizations, envirnomental protection organizations, and media" S. 525 
+* Testspezifikation [10] S. 3
+  * Enthält
+     * Testentwurfsspezifikation
+       * *Test design specification*
+       * Verfeinerung
+       * Merkmalsidentifikation
+       * Funktionsidentifikation
+       * Definition Erfolgreicher Testfälle/-abläufe
+       * Bestanden wird pro Funktion definiert
+     * Testfallspezifikation
+       * *test case specification*
+       * definition Eingabewerte
+       * Definition Ausgabewerte
+       * Beschreibung Vor- und Nachbedingungen, Ziele, Testaktionen
+       * Priorität
+       * Dauer
+       * mgl. zurücksetzen des Systems
+     * Testablaufspezifikation
+       * *test procedure specification*
+       * alle Schritte zur Durchführung
+       * Voraussetzungen herstellen
+* Testbericht [10] S. 4
+  * Ergebnisse aller Testläufe in eine Version
+  * *Testobjektübergabebericht*
+    * tests item transmittal report
+    * Beschreibung Übergabe der Testfälle
+    * für getrennte Entwicklungs- und Teststeams
+    * für offiziellen Start der Testphase
+    * alle zu testenden Merkmale sind aufgelistet
+  * *Testprotokoll*
+    * test log
+    * Chronologische Aufzeichnung während einer Testausführung
+    * intensives Logging -> schlechte Antwortzeit (+ mgl. dadurch neue Fehler), hohe Datenmengen
+  * *Testabweichungsbericht*
+    * test incident report
+    * alle Ereignisse, welche eine Nachprüfung benötigen
+  * *Testabschlussbericht*
+    * test summary report
+    * Zusammenfassen der Testktivitäten
+    * Schließt eine Teststufe ab
+    * kann Einschränkungen für nächste Teststufe definieren -> nicht alle Fehler gefixed -> Parallel trotzdem Testen und Abweichungen feststellen
+    * Bewertung des Testprozesses
+    * Erfahrungbericht
+  * *Statusbericht*
+    * zeigt Zwischenstand
+    * bei sehr großen Projekten mit langen Testphasen
+    * Informationen im Voraus definieren
+  *  fester Reporting-Rythmus
+  *  best: Berichte Tagesaktuell
+  *  oft weitere, individuelle Bericht (Testfortschrittsbericht, Teststufenbericht, ...)
+* Teststrategie [10] S. 9
+  * " eine Dokumentation, die die generischen Anforderungen an das Testen in einem oder mehreren Projekten innerhalb einer Organisation beschreibt, einschließlich der Details darüber, wie das Testen durchgeführt werden sol" [10] S. 9 
+  * an *Testrichtlinie* ausgerichtet
+    * "ein Dokument, in dem auf hohem Abstraktionsniveau die Prinzipien, der Ansatz und die wichtigsten Ziele einer Organisation in Bezug auf das Testen zusammenfasst" [10] S. 9f
+    * für ganzes Unternehmen
+    * Templates für Testdokumente
+  * *Testkonzept*
+    * Projekt beschreiben
+    * Anforderungen referenzieren
+    * Stakeholder
+    * Teststufen
+    * Termine
+  * Intensivität der Teststufen
+    * Abhängig von Budget, Risiko, Komplexität, Az. Teams
+    * Abstimmung mit Projektleiter + Product Owner
+  * Unternehmensabhängige Standartvorgaben
+  * Testvoraussetzungen, Testplanung, Integrationsstrategie, Testumfang
+  * Testumgebung, Testwerkzeug
+  * Prüfung Testergebnisse, Freigabevorgaben
+  * *Integrationsstrategie* [10] S. 13
+    * Module erst einzeln testen 
+    * Module haben verschiedene Testzeiten
+    * Module teilweise erst in Umgebung korrekt testbar
+    * Abschließend zusammenführen
+    * mgl. Platzhalter (Mocks, Stubs) verwenden
+    * Reihenfolge der Modulzusammenschließung
+    * wichtigsten Module am Anfang
+    * Eingabemodule vor Ausgabemodulen
+    * Parallele Integration mgl.
+  * *Tools* [10] S. 14
+    * unternehmensweit einheitlich
+    * definiert Testfallaufbau
+      * (bsp)
+      * Test-ID
+      * Testobjekt
+      * Testkonfiguration -> Konfiguration, Testumgebung, Vorschritte
+      * Testbeschreibung -> genau!!, Beschreibung Testfall + Testprozedur, Schrittfolge
+      * Priorität-> zwingend?, Regressionstestnotwendig, 
+      * Referenzen -> Bezug Pflichtenheft + andere Testfälle, Matrix Anforderung-Testfall
+      * Detailfelder/Kommentare für Ergänzungen
+      * Soll-Ergebnis -> messbar formuliert, kein Interpretationsspielraum
+      * Ist-Ergebnis
+      * Ergebnisbewertung -> OK/NOK; IO/NIO
+      * Fehlerreferenz
+      * Kommentar zu Ergebnissen
+      * Tester/Verantwortlicher
+      * Timestamp
+      * Testdauer
+    * zu beantwortende Fragen [10] S. 15
+      * Wozu ist das Projekt gut, was soll der Test bewirken?
+      * Was wird gemessen und wie wird gesteuert? (Betrachtungsobjekt – Produkt/Prozess/Ressource/Rahmenbedingung)
+      * Welche Aspekte gilt es zu berücksichtigen? (Führungsgrößen/Eigenschaften/Metriken)
+      * Mit welchem Maß erfolgt die Messung? (Maßeinheit/Messgröße zur Messung der Ausprägung)
+      * Welche Zielwerte werden verfolgt? (Ausgewählte Zielwerte)
+      * Wie wird gemessen? (Messmethode)
+      * Wann wird gemessen? (Zeitpunkt und Zeitraum der Messung)
+      * Wo wird gemessen? (Ort/Stelle)
+      * Wer führt die Messung durch? (Person/Gerät)
+      * Wie werden die Messergebnisse dokumentiert? (Qualitätsdaten)
+      * Wie werden Messergebnisse ausgewertet? (Vergleich gegen Zielwerte)
+      * Welche Maßnahmen werden ggf. zur nachhaltigen Verringerung der Abweichung bzw. Streuungen ergriffen und wer kontrolliert deren Wirkung?
+      * Welche Maßnahmen werden ggf. zur Vorbeugung ergriffen? 
+    * Balenced Scorecard [10] S. 16
+      * BSC
+      * Instrument zur Steuerung der Umsetzung von Strategien
+      * ca. 20 Ziele
+      * Ziel monitär und nicht-monitär
+      * Zielgrößen mit Sollwerte
+      * "Strategische Aktionen" zur Zielerreichung
+        * Terminvorgabe
+        * Budgetvorgabe
+        * Verantwortliche
+      * Planung: Top-Down
+      * Umsetzung: Bottom-Up
+      * Perspektiven:
+        * Finanz -> Ziele aus Erwägungen des Kapitalgebers
+        * Kunden ->  Ziele für Struktur und Anforderungen unserer Kunden -> finanzielle Ziele erreichen
+        * Prozess -> Ziele für Prozessqualität -> Ziele von Finanz- und Kundenperspektive erreichen
+        * Potenzial -> Ziele, um aktuellen und zukünfitigen Herausforderungen gewachsen zu sein
+      * Nutzen
+        * Planung, Entwicklung, Umsetzung von Strategien
+        * Leistungsvereinbarung für Führungskräfte
+        * Strategieumsetzung überwachen
+        * Präsentation bei Stakeholdern
+      * Vorteile
+        * richtet kritische Erfolgfaktoren auf Strategie aus
+        * schneller Überblick
+        * leicht verständlich
+        * flexibel
+      * Nachteile
+        * kein umfassendes Strategieentwicklungstool -> nur Kennzahlen
+        * zu ungenau für Kosten-Leistung-Rechnung
+        * nicht alle Kennzahlen
+      * 
