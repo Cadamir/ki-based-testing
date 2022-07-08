@@ -30,4 +30,7 @@
 |[26]|Wolfgang Ertel|2016 (4. Auflage)|Grundkurs Künstliche Intelligenz Eine praxisorientierte Einführung|DHBW Uni|yes|no|
 |[27]|Gerhard Paaß, Dirk Hecker| 2020|Künstliche Intelligenz Was steckt hinter der Technologie der Zukunft|DHBW Uni|yes|no|
 |[28]|IAV|2020|Mit Künstlicher Intelligenz Softwaretests schneller automatisieren|https://www.iav.com/was-uns-bewegt/mit-kuenstlicher-intelligenz-softwaretests-schneller-automatisieren/ [Zugriff: 06.07.2022]|yes|yes|
-[29]|Symflower GmbH|2022|Symflower|https://symflower.com/en/[Zugriff: 06.07.2022]|yes|no|
+[29]|Symflower GmbH|2022|Symflower|https://symflower.com/en/[Zugriff: 06.07.2022]|yes|Website yes; Tool tested no|
+|[30]|Applitools|2022|Next generation test automation platform powered by Visual AI|https://applitools.com/ [Zugriff: 07.07.2022]|no|no
+|[31]|Eggplant|2022|Eggplant Test|https://www.eggplantsoftware.com/products/test-automation-intelligence [Zugriff: 07.07.2022|no|no|
+|[32]|Keysight Technologies| 2021|-|yes|yes|

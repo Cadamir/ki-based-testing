@@ -993,4 +993,42 @@
     * Go
     * Java
   * keine Integrations-/Systemstests
-  * 
+* applitools [30]
+  * Visual AI
+  * more Productive
+  * higher Testcoverage
+  * Support 50 SDK
+  * Take Screenshot -> Vergleich nach Kontrolle, keine UI-Elemente mehr zugreifen
+* Eggplant software [31]
+  * optimieren der Performance
+  * schnellere Tests
+  * Verbindung Testen + Monitoring
+  * Nutzer-Bewegungen analysieren
+  * automatisches Erstellen eines Modelles der Webseite
+  * Intelligente Testplanung
+  * Intelligent Computer Vision
+    * verschiedene Browser/Geräte = verschiedene Ergebnisse
+    * DOM-Modell
+    * verschiedene Auflösung, Schriftgröße, Farben
+    * Objekte im Laufe der Entwicklung verändert
+    * Optical Character Extraction (OCE) -> vereinfachung automatisierten Testens
+      * 
+  * Universal Fusion Engine
+    * identifies, executes and adapts test models automatically
+  * API-Bewertung
+    * Vergleich Frontendangaben mit Backend-Ausgaben
+  * Jede Plattform
+    * alle Browser
+    * alle OS
+    * alle Geräte
+  * Model Based Testing
+    * App-Verhaltensvorhersage
+    * genauere/zuverlässigere Tests
+  * CI/CD Integration Adapters
+    * schnelleres Testfall erstellen
+  * Performance Test [32]
+    * Erstellen von Skripten
+    * Auto-Generierungen von Skripten
+    * Test-Ausführung -> Aufzeichnen der Performance/Anpassen von Parameter in Echtzeit
+    * Workflow -> Az. User, Abfolge
+    * 
