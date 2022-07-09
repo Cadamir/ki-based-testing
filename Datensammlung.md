@@ -1002,12 +1002,21 @@
 * Eggplant software [31]
   * verschiedene Bereiche
     * Performance [32]
-    * 
+    * ...
+  * Nutzen des Digital Twin Sufaces [33]
+    * Zustände und Aktionen
+    * Übergänge
+    * durch Modell
+    * Alle Möglichen Pfade
   * optimieren der Performance
   * schnellere Tests
   * Verbindung Testen + Monitoring
   * Nutzer-Bewegungen analysieren
-  * automatisches Erstellen eines Modelles der Webseite
+  * automatisches Erstellen eines Modelles der Webseite [31]
+    * Interaktives Erstellen [33]
+    * Model-Erstellung durch existierende Dateien (Gherkin) [33]
+    * Model-Erstellung durch echte Kunden [33]
+    * Intelligentes Anwendungsschaben (Durcharbeiten der Webseite) [33]
   * Intelligente Testplanung
   * Intelligent Computer Vision
     * verschiedene Browser/Geräte = verschiedene Ergebnisse
@@ -1042,4 +1051,78 @@
       * Injektoren in verschiedenen Ländern möglich
       * führen Eggplant (o.a. virtuell-User-Skripte) aus -> End-zu-End-Tests
   * AI [33]
-    * 
+    * Probleme Automatisiertes Testen
+      * Tests brechen schnell
+      * Wartung der Tests
+      * Entwicklung der Tests (Zeitaufwand)
+      * nur Teilweise "Autonom"
+      * Regression-Test-Set
+        * jedes Release
+        * vergangene behobene Fehlverhalten kehren nicht zurück
+      * Neue-Features-Test-Set
+      * Test-Phase zu kurz -> welche Tests/Verzögerung -> erhöhtes Risiko
+    * Daten konsumieren -> ML -> optimales Testset
+    * verbessert Menschen statt ersetzen
+    * vollautonome KI -> kein/wenig Kontext, keine Emotionen, kein Wissen
+    * Matrix Autonomes Test-Ausführen (ex) <-> Autonomes Test-Auswählen (sel)
+      * high ex - high sel
+        * Auwahl Tests
+        * vollständige Automatiserung von Testgenerierung bis Testausführung
+        * geringe Kosten
+        * umfangereiches Reporting
+      * low ex - high sel
+        * Auswahl Tests
+        * wenige notwendige Testdaten
+        * keine Testausführung
+        * Weniger Tester-Input notwendig
+        * Umfangreiche weitere Testautomatisierung notwendig -> hohe Wartungskosten
+        * umfangreiches Reporting
+      * low ex - low sel
+        * "Identify weak areas to test"
+        * keine Testauswahl
+        * keine Testausführung -> weitere Testautomatisierung notwendig
+        * viel manueller Input
+        * hohe Wartungskosten
+      * high ex - low sel
+        * Identifizieren von Bereichen zum konzentrieren
+        * wenige vorher bestimmte Tests
+        * von Generierung bis Ausführung
+        * Umfangreiche, automatische Reports 
+    * Testauswahl
+      * vorher definierte Tests
+      * hilft Testsmanager
+      * hoher Enwicklungsaufwand für Testgenerierung
+    * Testausführung
+      * benötigt Trainingsdaten
+      * hilt Testengineer
+      * Selbstheilende Tests
+      * sehr Trainingsdatenbasiert
+      * Risiko Fehler zu heilen
+    * Automation Intelligence
+      * Entscheidung welcher Applikationsbereich getestet werden muss
+      * Input-Daten = Daten aus verschiedenen Algorithmen
+      * Betrachten der 
+        * Fehlerhistorie
+        * Anwendungsänderungen
+        * Testcoverage Historie
+      * Erstellen der Tests
+        * Aus Modell heraus
+        * alle mgl. Pfade bekannt
+        * Auswahl Regressionstests
+        * "AI Bug Hunting" [33] Abb. S. 9
+        * Testabdeckungsanalyse
+        * Echte Nutzer Verhalten
+        * Änderungs- und Fehlermonitoring
+      * Ausführen der Tests
+        * Digitaler Zwilling
+        * Codeschnippsel für Übergänge
+          * einfachere Wartung -> eine Änderung = Update vieler Scripts
+          * schnellere Testfall-Generierung -> vielfälltige Tests, Entscheidungsbasierte Algorithmen
+          * größere Flexibilität -> Wiederverwendbarkeit, 
+        * Zusammensetzen der Schnippsel für Script
+        * 
+      * Report
+      * braucht keine guten Trainingsdaten (clean)
+      * keine schlechten Tests
+      * robuste Tests
+      * keine menschliche Eingabe
