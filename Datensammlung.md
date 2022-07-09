@@ -1000,6 +1000,9 @@
   * Support 50 SDK
   * Take Screenshot -> Vergleich nach Kontrolle, keine UI-Elemente mehr zugreifen
 * Eggplant software [31]
+  * verschiedene Bereiche
+    * Performance [32]
+    * 
   * optimieren der Performance
   * schnellere Tests
   * Verbindung Testen + Monitoring
@@ -1012,7 +1015,6 @@
     * verschiedene Auflösung, Schriftgröße, Farben
     * Objekte im Laufe der Entwicklung verändert
     * Optical Character Extraction (OCE) -> vereinfachung automatisierten Testens
-      * 
   * Universal Fusion Engine
     * identifies, executes and adapts test models automatically
   * API-Bewertung
@@ -1029,6 +1031,15 @@
   * Performance Test [32]
     * Erstellen von Skripten
     * Auto-Generierungen von Skripten
+      * Data Collection + Aufzeichnung
+      * Szenario einmal durchspielen
+      * Aufzeichnung Netzwerk (Sessions, Cookies, dynamic forms, asynchrone Kommunikation, mobile Endgeräte, Sicherheit => Probleme) 
     * Test-Ausführung -> Aufzeichnen der Performance/Anpassen von Parameter in Echtzeit
     * Workflow -> Az. User, Abfolge
+    * mehr als 100 000 virtueller Nutzer mgl.
+      * Nutzer durch Injektoren angelegt
+      * Beliebig viele Injektoren
+      * Injektoren in verschiedenen Ländern möglich
+      * führen Eggplant (o.a. virtuell-User-Skripte) aus -> End-zu-End-Tests
+  * AI [33]
     * 
