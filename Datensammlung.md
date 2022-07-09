@@ -1126,4 +1126,84 @@
       * keine schlechten Tests
       * robuste Tests
       * keine menschliche Eingabe
-* 
+* Testen mit KI [13]
+  * Produktqualität nach ISO2510
+    * Funktionale Eignung
+    * Leistungseffizients
+    * Kompatibilität
+    * Gebrauchstauglichkeit
+    * Zuverlässigkeit
+    * Informationssicherheit
+    * Wartbarkeit
+    * Übertragbarkeit
+    * *Intelligentes Verhalten* -> Sogetis
+      * Lernfähigkeit
+        * mit Regeln
+        * mit Daten und Deuten dieser
+        * mit Imitieren von anderen
+        * => Verstehen und Erfahrungen nutzen
+      * Improvisation
+        * Anpassung an neue Situationen
+        * Schnelle Interpretation der Daten
+        * Anpassen des eigenen Verhaltens
+      * Transparenz
+        * Nachvollziehbar durch Menschen
+        * welche Datenpunkte sind entscheident
+      * Zusammenarbeit
+        * Mensch-Roboter-Interaktionen
+        * Kommunikation
+      * Natürliche Interaktion
+        * Kommunikation
+        * Art und Weise der Kommunikation
+    * *Moral* -> Sogetis
+      * gutes/schlechtes Verhalten
+      * Asimovs Gesetze?
+      * Ethik
+        * nach Prinzipien handeln
+        * Basis:
+          * Gesetze
+          * Regeln
+          * Vorschriften
+          * moralische Werte
+      * Privatsphäre
+        * Schutz der Privatsphäre
+      * Freundlichkeit zu Menschen
+        * Mensch kein Schaden zufügen
+        * Vorteil für menschliche Gemeinschaft
+    * *Persönlichkeit* -> Sogetis
+      * Stimmung
+        * Anpassung der Stimmung an die Umgebung
+        * grundsätzlich positiv
+      * Empathie
+        * Emphatie simulieren
+        * Emotionen erkennen + entsprechend reagieren
+      * Humor
+        * heitere Gelassenheit
+        * erkennen von Humor
+        * später Nutzen von Humor
+      * Charisma
+        * ? sehe ich persönlich nicht so
+  * Nutzungsqualität nach ISO2510
+    * Effektivität
+    * Effizienz
+    * Zufriedenheit
+    * Risikofreiheit
+    * Kontextabdeckung
+  * Qualitätsmerkmale -> Kennzahlen -> Tests
+  * Testen - Zeiträume
+    * klassisches Testen - Monate
+    * agiles Testen - Wochen
+    * kontinuierliches Testen - Tage
+    * Digitales Testen - Minuten
+  * Testgenerierung durch evolutionäre Algorithmen
+  * Durchführung
+  * Überwachung
+  * Prognose
+    * Vorhersage von Fehlern/Fehlverhalten
+    * Voraussetzungen:
+      * Generierte Tests (Modelbased Testing, Digitaler Zwilling)
+      * automatisierte Testausführung
+      * Datensammlung in Echtzeit
+    * viele Modelle -> viele Ergebnisse
+    * Ergebnissmenge manuell Interpretieren
+  * 
