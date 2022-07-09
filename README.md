@@ -21,4 +21,27 @@ Ein Schwerpunkt soll dabei auf die automatisierte Generierung von Tests gelegt w
 * Durchführung eines "proof-of-concept" im Bereich Generierung von Softwaretests für zwei verschiedene Sprachen (Java, Angular)
 * Bewertung unter besonderer Berücksichtigung der Ergebnisse des "proof-of-concept"
 
+Wochen 1-3
+* Literatur-Rechereche
+* Datensammlung anlegen
+Woche 4
+* Datensammlung sotieren
+* Tools analysieren
+* Tools Demos anfordern
+* Tools ausprobieren
+Woche 5
+* Tools ausprobieren
+* 
+Woche 6
+Woche 7
+Woche 8
+Woche 9
+Woche 10
+Woche 11-12
+* Fehlerfinden
+* Lesen
+* Umformulieren
+* Feinschliff
+* *__keine neue Literatur__*
+
 ## Literatur
