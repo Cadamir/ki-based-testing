@@ -4,13 +4,17 @@
 1. Einleitung
 2. Traditonelle Teststrategien
   1. Probleme traditioneller Strategien
+  2. Probleme Automatiesiertes Testen
 3. KI-Basiertes Testen als Ansatz
-4. Verschiedene nutzbare KI-Modelle
-5. Marktschau
-  1. Tools theoretisch darstellen
-  2. Umsetzung/Einführung eines Testframeworks für Java/Angular
-  3. Auf Umsetzung basierende Bewertung
-6. Fazit
+   1. KI Allgemein
+   2. Verschiedene nutzbare KI-Modelle
+   3. Vorteile KI-Basiertes Testen
+   4. Nachteile KI-Basiertes Testen
+4. Marktschau
+  3. Tools theoretisch darstellen
+  4. Umsetzung/Einführung eines Testframeworks für Java/Angular
+  5. Auf Umsetzung basierende Bewertung
+5. Fazit
 
 ## Einleitung
 Grund für die Arbeit

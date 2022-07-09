@@ -24,19 +24,29 @@ Ein Schwerpunkt soll dabei auf die automatisierte Generierung von Tests gelegt w
 Wochen 1-3
 * Literatur-Rechereche
 * Datensammlung anlegen
-Woche 4
+Woche 4 + 5
 * Datensammlung sotieren
+* Literatur-Recherche + einsortieren
 * Tools analysieren
 * Tools Demos anfordern
 * Tools ausprobieren
-Woche 5
-* Tools ausprobieren
-* 
+* Tools Kategoriesieren
+* Tools bewerten
+* Tools Fragen
 Woche 6
+* Literaturrecherche + einsortieren
+* Schreiben KI
+* Schreiben Testen Überblick
 Woche 7
+* Schreiben Tools Theorie
 Woche 8
+* Erstellen Proof of Concept
 Woche 9
+* Schreiben Proof of Concept
 Woche 10
+* Schreiben Einleitung
+* Schreibne Fazit
+* Schreiben Ausblick
 Woche 11-12
 * Fehlerfinden
 * Lesen
