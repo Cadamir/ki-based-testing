@@ -1206,4 +1206,17 @@
       * Datensammlung in Echtzeit
     * viele Modelle -> viele Ergebnisse
     * Ergebnissmenge manuell Interpretieren
-  * 
+* KI Qualität [14]
+  * echte Nutzer erschaffen Daten
+  * hohe Diversität der Daten
+    * Geschlecht
+    * Nation
+    * Alter
+    * Ethnien
+    * Kultur
+    * politische Einstellung
+    * ökonomische Merkmale
+    * Bildungsniveau
+    * weniger Bias
+  * Suche nach Verzerrungen
+* 
