@@ -1228,4 +1228,59 @@
   * erstellte Tests -> aktuelle Funktion der Methoden
   * Regressionstests/Refactortests automatisch gegeben
   * bei neuen "push" in Reporitory
-* 
+* AI im Software Tests [24]
+  * Reduzierung Time2Market
+  * besserers Automatisiertes Testen
+  * mehr vollgetestete Software
+  * 2 Testtypen
+    * manuelles Testen
+      * Tester selbst überprüft
+      * keine extra Tools
+    * Automatisiertes Testen
+      * erstellen von Skripts
+      * Software testet Software
+  * Requirement Analysis -> Testplanning -> Test Development-> Test Execution -> Evaluation exit criteria -> Test Closure -> von vorn
+  * Teststages:
+    * development testing
+      * Unit Tests -> Funktionalitätstest, Konzentration auf eine Funktion/Klasse
+      * Component Tests -> Software-Einheiten zusammenführen und Testen, Fokus auf Komponenten-Interfaces
+      * System Tests -> Zusammenführung Software verschiedener Teams
+    * Release Testing
+      * Requirement Testing -> für jede Vorgabe => Testfall
+      * Scenario Testing -> Nutzerverhalten nachstellen und Testfälle entsprechend generieren
+      * Performance Testing -> Vorgegebene Last aushalten
+    * User Testing
+      * Apha Testing -> Tests in der Testumgebung
+      * Beta Testing -> Tests in der Nutzerumgebung
+      * Acceptance Testing -> Tests durch Nutzer
+  * Vereinfachung -> schnellere Testfallgenerierung
+  * Kategorien von ML
+    * Arbeitsweise
+    * Mathematische/statistische Modelle
+    * Annahmen
+    * Characteristiken
+    * Genauigkeit
+    * Lösungskategorien
+  * MELBA
+    * MachinE Learning based on BlAckbox test specification
+    * ML basierend auf Blackbox Testspezifikationen
+    * teilautomatisiierter, iterativer Algorithmus basierend auf C4.5 {? was ist C4.5}
+    * C4.5 generiert Entscheidungsbäume
+    * höhere Fehlererkennung
+    * leicht höherer Testfälle
+    * [[4]]
+  * Merkmalsextraktion für Modellgenerierung
+    * welche Merkmale sind wichtig
+    * Daten von automatisierten Tools
+    * SVR (Algorithmus) ist genauste
+    * [[5]]
+  * GUI Testing mit AI
+    * HGA (hybrid genetic Algorithm)
+    * Optimierung: Test-Sequenz-Optimierung + Testfall-Optimierung
+    * [[6,7]]
+  * Testfallklassifizierung
+    * k-means Clustering
+    * Statement Coverage Criterion -> am wichtigsten
+  * Testfall-Durchführbarkeit vorhersagbar [[10]]
+  * Änderungsanfälligkeit vorhersagen
+    * [[13]]
