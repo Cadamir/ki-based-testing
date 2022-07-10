@@ -1219,4 +1219,13 @@
     * Bildungsniveau
     * weniger Bias
   * Suche nach Verzerrungen
+* Symflower [15]
+  * Autonomes Testen
+    * -> höhere Qualität
+    * -> Mitarbeiterentlastung
+    * -> Kostenreduzierung
+  * automatisierte Unit-Test-Erstellung
+  * erstellte Tests -> aktuelle Funktion der Methoden
+  * Regressionstests/Refactortests automatisch gegeben
+  * bei neuen "push" in Reporitory
 * 
