@@ -33,27 +33,40 @@ Aufbau der Arbeit
 * KI-basiert
 * Marktschau
 
-## Traditionelle Teststrategien
-### Themen
-* Was ist Testen
-* Warum Testen
-* kurzer historischer Abriss
-* Testfallgenerierung
-* Darstellen der wichtigsten Teststrategien
-* Testmetriken
-* Probleme traditioneller Teststrategien
+# Zusammenfassung
 
-### Daten
+## Testen
+### Allgemein
+* Warum tests? ([18] S. 7)
+  * komplexere Produkte
+    * viele Features
+    * viele Komponenten
+    * Verändungen haben viele Abhängigkeiten
+  * schnellere Produktzyklen
+    * mehr Produkte in weniger Zeit
+  * stärkerer Wettbewerb
+    * Globalisierung -> Vergleichbarkeit/Austauschbarkeit einfacher
+  * verteilte Entwicklung
 * Möglichst schnelle Auslieferung von Produkten [1/1]
 * Optimierung durch DevOps Bausteinen [1/1]
 * Testautomatisierung soll [1/1]
    * Zeit reduzieren
    * Arbeit reduzieren
-* Testautomatisierung macht [1/1]
-   * Wartung (oft Kleinarbeit)
-   * End-To-End-Tests sehr anfällig
-   * Langwierige Analysen
-   * Registrierungsaufwand von GUI-Objekten
+* Alte QA-Welt [1/4]
+  * Bestandteile
+    * UI
+    * Peripherie (Bildschrim, Tastatur, Schreibpad, ...)
+    * Core-Software
+    * Schnittstellen zu "Umsoftware"
+    * Speicher
+  * Tests
+    * Unit-Tests
+    * System-Tests (ST)
+    * System-Integration-Tests (SST)
+  * funktionale Tests -> korrektes Ergebnis
+  * nicht-funktionale Tests -> Werte im Rahmen (Ladezeit, ...)
+  * User Akzeptanztests (UAT) -> Verwendbares Design/System für Nutzer
+  * Bei KI ändert sich nur Steuerung (Core-Software Steuerungskomponente)
 * Qualitätssicherung [11]
   * "Aufgabe der Qualitätssicherung, jedwede Art von Fehlern vor der Auslieferung einer Software zu finden und das Auftreten von Fehlern beim Kunden zu vermeiden." ([11], 2.2 Konstruktive und analytische Qualitätssicherung, S. 19)
   * Fehler kann nicht beobachtet werden -> nur Fehlverhalten -> daraus Fehler ableiten
@@ -140,17 +153,7 @@ Aufbau der Arbeit
       * automatisiert: Log
     * Auswertung
       * Analyse dieser Ergebnisse
-      * teilweise Rückkehr zu älteren Phasen
-* Warum tests? ([18] S. 7)
-  * komplexere Produkte
-    * viele Features
-    * viele Komponenten
-    * Verändungen haben viele Abhängigkeiten
-  * schnellere Produktzyklen
-    * mehr Produkte in weniger Zeit
-  * stärkerer Wettbewerb
-    * Globalisierung -> Vergleichbarkeit/Austauschbarkeit einfacher
-  * verteilte Entwicklung
+      * teilweise Rückkehr zu älteren Phasen  
 * Test-reviewing [18] S. 13
   * Neue Anforderungen
   * erweiterte  Szenarien
@@ -210,48 +213,162 @@ Aufbau der Arbeit
     * ISO/IEC 29119-3: Test Documentation
     * ISO/IEC 29119-4: Test Techniques
     * ISO/IEC 29119-5: Keyword Driven Testing
+* Testspezifikation [10] S. 3
+  * Enthält
+     * Testentwurfsspezifikation
+       * *Test design specification*
+       * Verfeinerung
+       * Merkmalsidentifikation
+       * Funktionsidentifikation
+       * Definition Erfolgreicher Testfälle/-abläufe
+       * Bestanden wird pro Funktion definiert
+     * Testfallspezifikation
+       * *test case specification*
+       * definition Eingabewerte
+       * Definition Ausgabewerte
+       * Beschreibung Vor- und Nachbedingungen, Ziele, Testaktionen
+       * Priorität
+       * Dauer
+       * mgl. zurücksetzen des Systems
+     * Testablaufspezifikation
+       * *test procedure specification*
+       * alle Schritte zur Durchführung
+       * Voraussetzungen herstellen
+* Testbericht [10] S. 4
+  * Ergebnisse aller Testläufe in eine Version
+  * *Testobjektübergabebericht*
+    * tests item transmittal report
+    * Beschreibung Übergabe der Testfälle
+    * für getrennte Entwicklungs- und Teststeams
+    * für offiziellen Start der Testphase
+    * alle zu testenden Merkmale sind aufgelistet
+  * *Testprotokoll*
+    * test log
+    * Chronologische Aufzeichnung während einer Testausführung
+    * intensives Logging -> schlechte Antwortzeit (+ mgl. dadurch neue Fehler), hohe Datenmengen
+  * *Testabweichungsbericht*
+    * test incident report
+    * alle Ereignisse, welche eine Nachprüfung benötigen
+  * *Testabschlussbericht*
+    * test summary report
+    * Zusammenfassen der Testktivitäten
+    * Schließt eine Teststufe ab
+    * kann Einschränkungen für nächste Teststufe definieren -> nicht alle Fehler gefixed -> Parallel trotzdem Testen und Abweichungen feststellen
+    * Bewertung des Testprozesses
+    * Erfahrungbericht
+  * *Statusbericht*
+    * zeigt Zwischenstand
+    * bei sehr großen Projekten mit langen Testphasen
+    * Informationen im Voraus definieren
+  *  fester Reporting-Rythmus
+  *  best: Berichte Tagesaktuell
+  *  oft weitere, individuelle Bericht (Testfortschrittsbericht, Teststufenbericht, ...)
+* Teststrategie [10] S. 9
+  * " eine Dokumentation, die die generischen Anforderungen an das Testen in einem oder mehreren Projekten innerhalb einer Organisation beschreibt, einschließlich der Details darüber, wie das Testen durchgeführt werden sol" [10] S. 9 
+  * an *Testrichtlinie* ausgerichtet
+    * "ein Dokument, in dem auf hohem Abstraktionsniveau die Prinzipien, der Ansatz und die wichtigsten Ziele einer Organisation in Bezug auf das Testen zusammenfasst" [10] S. 9f
+    * für ganzes Unternehmen
+    * Templates für Testdokumente
+  * *Testkonzept*
+    * Projekt beschreiben
+    * Anforderungen referenzieren
+    * Stakeholder
+    * Teststufen
+    * Termine
+  * Intensivität der Teststufen
+    * Abhängig von Budget, Risiko, Komplexität, Az. Teams
+    * Abstimmung mit Projektleiter + Product Owner
+  * Unternehmensabhängige Standartvorgaben
+  * Testvoraussetzungen, Testplanung, Integrationsstrategie, Testumfang
+  * Testumgebung, Testwerkzeug
+  * Prüfung Testergebnisse, Freigabevorgaben
+  * *Integrationsstrategie* [10] S. 13
+    * Module erst einzeln testen 
+    * Module haben verschiedene Testzeiten
+    * Module teilweise erst in Umgebung korrekt testbar
+    * Abschließend zusammenführen
+    * mgl. Platzhalter (Mocks, Stubs) verwenden
+    * Reihenfolge der Modulzusammenschließung
+    * wichtigsten Module am Anfang
+    * Eingabemodule vor Ausgabemodulen
+    * Parallele Integration mgl.
+  * *Tools* [10] S. 14
+    * unternehmensweit einheitlich
+    * definiert Testfallaufbau
+      * (bsp)
+      * Test-ID
+      * Testobjekt
+      * Testkonfiguration -> Konfiguration, Testumgebung, Vorschritte
+      * Testbeschreibung -> genau!!, Beschreibung Testfall + Testprozedur, Schrittfolge
+      * Priorität-> zwingend?, Regressionstestnotwendig, 
+      * Referenzen -> Bezug Pflichtenheft + andere Testfälle, Matrix Anforderung-Testfall
+      * Detailfelder/Kommentare für Ergänzungen
+      * Soll-Ergebnis -> messbar formuliert, kein Interpretationsspielraum
+      * Ist-Ergebnis
+      * Ergebnisbewertung -> OK/NOK; IO/NIO
+      * Fehlerreferenz
+      * Kommentar zu Ergebnissen
+      * Tester/Verantwortlicher
+      * Timestamp
+      * Testdauer
+    * zu beantwortende Fragen [10] S. 15
+      * Wozu ist das Projekt gut, was soll der Test bewirken?
+      * Was wird gemessen und wie wird gesteuert? (Betrachtungsobjekt – Produkt/Prozess/Ressource/Rahmenbedingung)
+      * Welche Aspekte gilt es zu berücksichtigen? (Führungsgrößen/Eigenschaften/Metriken)
+      * Mit welchem Maß erfolgt die Messung? (Maßeinheit/Messgröße zur Messung der Ausprägung)
+      * Welche Zielwerte werden verfolgt? (Ausgewählte Zielwerte)
+      * Wie wird gemessen? (Messmethode)
+      * Wann wird gemessen? (Zeitpunkt und Zeitraum der Messung)
+      * Wo wird gemessen? (Ort/Stelle)
+      * Wer führt die Messung durch? (Person/Gerät)
+      * Wie werden die Messergebnisse dokumentiert? (Qualitätsdaten)
+      * Wie werden Messergebnisse ausgewertet? (Vergleich gegen Zielwerte)
+      * Welche Maßnahmen werden ggf. zur nachhaltigen Verringerung der Abweichung bzw. Streuungen ergriffen und wer kontrolliert deren Wirkung?
+      * Welche Maßnahmen werden ggf. zur Vorbeugung ergriffen? 
+    * Balenced Scorecard [10] S. 16
+      * BSC
+      * Instrument zur Steuerung der Umsetzung von Strategien
+      * ca. 20 Ziele
+      * Ziel monitär und nicht-monitär
+      * Zielgrößen mit Sollwerte
+      * "Strategische Aktionen" zur Zielerreichung
+        * Terminvorgabe
+        * Budgetvorgabe
+        * Verantwortliche
+      * Planung: Top-Down
+      * Umsetzung: Bottom-Up
+      * Perspektiven:
+        * Finanz -> Ziele aus Erwägungen des Kapitalgebers
+        * Kunden ->  Ziele für Struktur und Anforderungen unserer Kunden -> finanzielle Ziele erreichen
+        * Prozess -> Ziele für Prozessqualität -> Ziele von Finanz- und Kundenperspektive erreichen
+        * Potenzial -> Ziele, um aktuellen und zukünfitigen Herausforderungen gewachsen zu sein
+      * Nutzen
+        * Planung, Entwicklung, Umsetzung von Strategien
+        * Leistungsvereinbarung für Führungskräfte
+        * Strategieumsetzung überwachen
+        * Präsentation bei Stakeholdern
+      * Vorteile
+        * richtet kritische Erfolgfaktoren auf Strategie aus
+        * schneller Überblick
+        * leicht verständlich
+        * flexibel
+      * Nachteile
+        * kein umfassendes Strategieentwicklungstool -> nur Kennzahlen
+        * zu ungenau für Kosten-Leistung-Rechnung
+        * nicht alle Kennzahlen
+		
+### Testautomatisierung
+* Testautomatisierung macht [1/1]
+   * Wartung (oft Kleinarbeit)
+   * End-To-End-Tests sehr anfällig
+   * Langwierige Analysen
+   * Registrierungsaufwand von GUI-Objekten
 
-## KI-basierter Testansatz
-### Themen
-* Grundidee
-* Welche Arten gibt es?
-* Welche Einsatzzwecke gibt es?
-* Welche Vorteile/Schwächen weisen die KIs auf
+### Vorgehen
 
-### Daten
-* Testen mit KI
-   * GUI analysieren
-   * Testfälle abschätzen, 
-   * Automatische Wartung einiger Skripte
-   * Optische Veränderungen aufzeigen
-   * Testberichte
-   * Auswahl und Priorisierung von Regressionstestfällen
-* Spidering AI [1/3]
-   * Automatisierte Generierung von Testfällen durch "Spidering"
-   * Crawled Anwendungsdaten
-      * Screenshots
-      * HTML-Code-Download
-      * Ladezeitenmessung
-   * Wiederholung um KI zu trainieren
-   * bei signifikaten Änderungen (zB. Ladezeit) Error/potentielles Problem
-   * Mensch muss Probleme betrachten
-* Visual Validation Automation Testing [1/3]
-   * Richtige Daten am Frontend 
-   * Erscheinungsbild gesamt und einzelnelemente werden validiert
-   * vergleicht aktuelle Screenshots mit originalen Screenshotes
-* API-Test [1/3]
-   * hohe Testabdeckung
-   * geringe Komplexität
-   * Testgenerierung 
+## KI
 
-## verschiedene nutzbare KI-Modelle
-### Themen
-* Verschiedene Arten von KIs
-* vermutlich Neuronale Netze und Deep Learning oder eben auch nicht
-* Trainingsmethoden
-* Eingabeparameter
-
-### Daten
+### Allgemein
 * Was ist künstliche Intelligenz [1/1]
    * "die Lehre der Automatisierung intelligenten Verahltens, sowie des maschinellens Lernens" ([1/1] - "Künstliche Intelligenz - was bedeutete das eigentlich?")
    * stark vs schwach
@@ -260,17 +377,11 @@ Aufbau der Arbeit
    * Muster/Gesetzmäßigkeiten erkennen/verallgemeinern
    * Arbeitet mit Wahrscheinlickeiten [1/3]
    * KI macht aus Daten Informationen und aus Informationen Wissen [1/3]
-* KI [5]
-* Machine Learnig (ML) Teilgebiet KI [5] S. 18
-* Deep Learning (DL) Teilgebiet ML [5] S. 18
-* ML -> Strukturen erkennen aus dem Lösen vorgegebener Probleme, um diese Strukturen auf Anwendungen zu übertragen
-* Trainig: supervised Learning (SL), unsupvised Learning (UL), reinforcement Learining (RL) [5] S. 18
-* Traditionelle ML: Datenvorverarbeitung -> Merkmalextraktion -> Merkmalreduktion -> Modellentwicklung [5] S. 19
-* Daten: normalisiert, fehlerfrei, keine Verzerrung [5] S. 19
-* DL: End-to-End [5] S. 19
-  * keine Merkmalsextrakiton
-  * keine Problemdekomposition 
-  * orientierung an der Funktionsweise des menschlichen Gehirns [5] S. 67
+* Einsatz KI bisher [1/2] (notwendig?)
+   * große Datenmengen auswerten
+   * Situationen mit statistischenr Analyse bewerten
+   * Vorhersagen treffen
+   * Spachbot, Chatbot, Werbung, Big Data
 * KI Beispiele [5] S. 18 (Fußnote)
   * ML
   * Wissensrepräsentation
@@ -281,12 +392,6 @@ Aufbau der Arbeit
   * fallbasiertes, nicht monotones Schließen
   * Contrain-basierte Programmierung
   * Optimierung
-* ML-Beispiele [5] S. 18
-  * DL
-  * Entscheidungsbäume
-  * Random Forest
-  * Support Vector Machines
-  * genetische Algorithmen
 * KI-Ziel: >= Performance wie menschlicher Experte, Arbeitet mit Wissen und Verstand [5] S. 33
 * Klassifiezierung von Programmen [5] S. 33-35
   * Wissenbasierte Syteme: [5] S. 33
@@ -308,6 +413,133 @@ Aufbau der Arbeit
     * _reuse_ -> Lösungsansätze wiederverwenden
     * _revise_ -> gefundene Lösungen anpassen
     * _retain_ -> beste Lösung speichern
+* Computer Vision[2] S. 317
+  * Informationen aus Visuellen Daten erhalten
+  * Analysierbar/bearbeitbar machen
+  * Menschliche Sicht nachspielen
+  * erkennen, verfolgen, Bewegungsanalyse, text erkennung
+  * eng verwandt mit Image processing
+    * Bildverbesserung
+    * Bildkomprimierung
+    * Merkmalserkennung
+    * Bildverschmelzung
+  * Kantenerkennung
+    * Helligkeitsuneinheitlichkeiten
+    * Unkontinuierlichkeiten in der Tiefe
+    * Unkontinuierlichkeiten bei Oberflächen
+    * Wechsel in Textur/Material
+    * Beleuchtungsunterschiede
+    * Search-Based -> Extrema der Intensität der Änderung (Ableitung) -> Gradienten
+    * Zero-Crossing-Based -> Extram in Änderung + Wendepunkt der 2. Ableitung 
+* Vertrauenswürdige AI [2] S. 519
+  * Guidelines S. 520
+    * OECD Principles of AI
+      * Inclusive growth, sustainable development and well-being ([2] S. 521) -> Verbesserung menschlicher Fähigkeiten, Verringerung Ungleichheiten, UmweltSchutz
+      * Human-centred values and fairness ([2] S. 521) -> Achten von Rechtsstaat, Menschenrechte, Freiheit, Würde, Autonomie, Privatsphäre, Datenschutz, Nichtdiskriminierung
+      * Transparency and explainability ([2] S. 521) -> offenlegen von Infos, Nachvollziehbarkeit und Anfechtbarkeit von KI-Ergebnissen
+      * Robustness, security and safety ([2] S. 521) -> Datensäzte, Entscheidungen, Prozesse Rückverfolgbar; IT-Sicherheit
+      * Accountability ([2] S. 521) -> Entwickler + User sind verantwortlich für KI
+    * UNESCO Recomondation of the Ethics of AI 
+    * UNICEF Policy Guidance on AI for Children
+    * EU HLEG Guidelines for Trustworthy AI
+      * Human agency and oversight ([2] S. 521) -> Including fundamental rights, human agency, human oversight. 
+      * Technical robustness and safety ([2] S. 521) -> Angriffsrobustheit, Ausweichpläne, Reproduzierbarkeit, Genauigkeit, Zuverlässigkeit
+      * Privacy and data governance ([2] S. 521) -> Datenschutz, Datenqualität, Datenintegrität, Datenzugriff
+      * Transparency ([2] S. 521) -> Nachverfolgbarkeit, Erklärbarkeit, Kommunikaiton
+      * Diversity, non-discrimination and fairness ([2] S. 521) -> Verzerrung vermeiden, Zugriff, Universelles Design, Stakeholder-Teilhabe 
+      * Societal and environmental wellbeing ([2] S. 521) -> Unweltschutz, Sozialer Einfluss, Nachhaltigkeit
+      * Accountability ([2] S. 521) -> Verantwortungsaufteilung, Berichten negativer Ergebnisse 
+    * EU White Paper on AI
+  * Richtlinien
+    * IEEE Ethically Aligned Design: https://ethicsinaction.ieee.org/#series
+    * ISO/IEC Standards on AI and Trustworthy AI:https://www.iso.org/committee/6794475.html
+    * NIST Standards for Trustworthy and Responsible AI: https://www.nist.gov/programs-projects/trustworthy-and-responsible-ai
+    * CEN-CENELEC Committee on Artificial Intelligence: https://www.cencenelec.eu/areas-of-work/cen-cenelec-topics/artificial-intelligence/
+  * Regulierungen
+    *  EU Digital Strategy: https://ec.europa.eu/info/strategy/priorities-2019-2024/europe-fit-digital-age_en
+    *  GDPR: https://ec.europa.eu/info/law/law-topic/data-protection/data-protection-eu_en
+    *  DSA: https://ec.europa.eu/info/strategy/priorities-2019-2024/europe-fit-digital-age/digital-services-act-ensuring-safe-and-accountable-online-environment_en
+    *  DMA: https://ec.europa.eu/info/strategy/priorities-2019-2024/europe-fit-digital-age/digital-markets-act-ensuring-fair-and-open-digital-markets_en
+    *  EU Draft AI Act: https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence
+  * Transparenz [2] S. 533
+    * Informationen über Training, genutzte Merkmale, Trainingsmethoden, Performance, ...
+    * erhöhen der Transparenz/Verantwortungsverteilung
+    * leichtere Reproduzierbarkeit
+    * Biases leichter erkennbar
+    * Dokumentation soll folgendes beantworten:
+      * Why is the data being collected? Who requested/funded the data collection, and for what purpose?
+      * What is the composition of the data set (for example, does it contain tabular data, or text data? Multi-modal data?)
+      * How was the data collected? What sampling procedure, why was that method chosen, and sampled from which population?
+      * Was the data labelled? If so, by whom?
+      * What were the pre-processing steps?
+      * What are the results of the Exploratory Data Analysis? (For example, how many items, how many features, correlations, sensitive characteristics, etc.)
+      * What are the intended uses of this data set, and are there uses to avoid?
+      * Will the data set be distributed? If so, how?
+      * Who is repsonsible for the maintenance of the data set?
+    * Model-Dokumentation
+      * Basic logistic information about the model, such as person or organization developing it, licenses, and where to send questions or bug reports..
+      * Basic descriptions of the training algorithms, the model parameters, optimization function, fairness constraints, and features.
+      * Intended use, in particular optimal uses, primary intended users, and use cases to avoid.
+      * Under which conditions – for example, using which target populations; if audio/visual input is required, which kind, and under what environmental conditions – the model performance has been tested.
+      * Which metrics were used to measure model performance? Which fairness metrics? What decision thresholds were used?
+      * Details on the training and test data (see Documenting the data section above)
+    * Erklärbarkeit
+      * Feature summary statistics: Merkmalsgewichtung, Beziehung Merkmal-Vorhersage
+      * Feature summary visualization: Grafische Merkmals-Vorhersage-Beziehungs-Ausgabe
+      * Model internals: Gewichtungen, Bäume, ...
+*  Teilhaber [2] S. 524
+  * Data provider -> Sammeln, Bearbeiten, Liefern von Daten
+  * AI Provider
+    * Management
+    * "Legal department/Corporate responsibility department"
+    * Datenschutz 
+    * Systemarchitekt/Data Engineer
+    * Entwickler
+    * Quality
+  * AI User
+    * Management
+    * "Legal department/Corporate responsibility department"
+    * Qualität
+    * Datenschutz
+    * System Architekt
+    * Menschliche Ressourcen
+    * Beschaffung
+    * direkte Nutzer/wegautomatisierte Arbeiter
+  * AI Objekt -> Objekt, über welches Vorhersagen getroffen werden
+  * Certifikation Body -> Bescheinigung eingehaltener Standarts
+  * Regulator -> Leistungskritieren festlegen, 
+  * "Broader society, including for example human rights organizations, consumer protection organizations, envirnomental protection organizations, and media" S. 525 
+* KI Qualität [14]
+  * echte Nutzer erschaffen Daten
+  * hohe Diversität der Daten
+    * Geschlecht
+    * Nation
+    * Alter
+    * Ethnien
+    * Kultur
+    * politische Einstellung
+    * ökonomische Merkmale
+    * Bildungsniveau
+    * weniger Bias
+  * Suche nach Verzerrungen
+
+### ML
+* Machine Learnig (ML) Teilgebiet KI [5] S. 18
+* ML -> Strukturen erkennen aus dem Lösen vorgegebener Probleme, um diese Strukturen auf Anwendungen zu übertragen
+* Trainig: supervised Learning (SL), unsupvised Learning (UL), reinforcement Learining (RL) [5] S. 18
+* Traditionelle ML: Datenvorverarbeitung -> Merkmalextraktion -> Merkmalreduktion -> Modellentwicklung [5] S. 19
+* Daten: normalisiert, fehlerfrei, keine Verzerrung [5] S. 19
+* DL: End-to-End [5] S. 19
+  * keine Merkmalsextrakiton
+  * keine Problemdekomposition 
+  * orientierung an der Funktionsweise des menschlichen Gehirns [5] S. 67
+* ML-Beispiele [5] S. 18
+  * DL
+  * Entscheidungsbäume
+  * Random Forest
+  * Support Vector Machines
+  * genetische Algorithmen
+
 * Lernen 2D kategorisierbar [5] S. 39
   * Lernmodus
     * SL
@@ -367,6 +599,124 @@ Aufbau der Arbeit
   * Entwickler klassifizerien ebenfalls Daten (unlabelt to labelt)
 * Daten zentrale Rolle [5] S. 46
   * Ohne Daten kein Training
+* ML [2] S. 201
+  * kein Rule-Set programmieren
+  * Regeln lernen von Beispielen
+  * zB. kein Hand-erstellter Decision-Tree
+  * Modell macht vorhersagen
+  * Grundlage sind "Beobachtungen" und Vorhersagewert
+  * Merkmalsextraktion ist wichtig
+    * Handerlesene Merkmale  
+      * Daten von Experten in Merkmale aufgeteilt
+      * Wichtige Merkmale erhalten lassen
+      * Unwichtige/Störende Merkmale entfernen
+      * Wenn ein bekannter/starker Zusammenhang zwischen einen Merkmal und Ergebnis besteht: Nutze das Merkmal
+    * Algorithmische Merkmalsextraktion
+      * Algorithmus unterscheidet wichtige von unwichtigen Merkmalen
+      * unvariante Merkmalsextraktion -> Merkmale einzeln betrachten
+      * multivariante Merkmalsextraktion -> Merkmale im Zusammenhang
+    * Algorithmische generierung von Merkmalen
+      * Extraktor durch Trainingsdaten trainiert
+      * keine Beschränkung auf bestimmtes Merkmalsvokabular
+  * Nearest Neighbor -> sehr Empfindlich bei unnötigen Merkmalen
+  * Support Vektor Machine -> sehr Empfindlich
+  * Verbesserung -> robust gegen uninformative Merkmale
+    * boosting Models (zB. AdaBoost)
+    * bagging Models (zB. RandomForest)
+  * schwache Lerner (weak learners) genutzt -> Zusammenschluss der schwachen erstellt Vorhersage
+  * verschiedene Teilmengen der Trainingsdaten werden für verschiedene schwache Lerner genutzt
+  * schwache Lerner die keine Ahnung von Problem haben -> gleichmäßig verteilte unterschiedliche Ergebnisse -> gleichen sich aus
+  * schwache Lerner mit Ahnung -> stimmen fürs selbe -> leichte Erhöhung an der richtigen Stelle
+  * Klassifizierungsmodelle: [2] S. 206f
+    * k-Nearest Neighbors -> Merkmale eines Objektes zu Vektor/Punkt -> Abstand zu allen anderen Punkten/Objekten -> k kürzeste Abstände Punkte werden die Klassen gezählt -> häufigste Klasse = eigene Klasse
+    * Suport Vector Machine:
+      * ermittelt relative Dichte
+      * Support Vektoren werden ermittelt
+      * Vectoren sind ähnlich zu den Grenzen (Borders) im Merkmals-Raum
+      * Vektoren haben den maximalen Abstand zueinander
+      * Hyperplane wird zwischen den Vektoren erstellt
+      * Hyperplane hat eine Dimension weniger als der eigentliche Merkmalsraum
+    * Entscheidungsbäume
+      * Klassifikation
+      * Reihe von Entscheidungen
+      * Jede Verzweigung = ein Merkmal
+      * Schlussendlich -> Blatt = Klasse
+      * kein kontinuierlicher Vektorraum notwendig/mgl
+      * Alle Merkmale werden als diskrete Werte betrachtet
+      * Kategorische Merkmale gehen je nach Kategorie in andere Äste
+      * Skalare Werte -> Schwellenwert(e) zur Unterscheidung
+      * sehr anfällig für Overfitting/Overtraining
+  * Ensemble Modelle [2] S. 209ff
+    * -> durch viele einfache Modelle
+    * -> einzelnes Modell oft nur mit Teil-Trainingsdaten trainiert
+    * -> einfaches Modell = schwache Lerner (weak Learners)
+    * -> einzelne Vorhersagen zusammen eine gemeinsame
+    * geringe Variance: -> ähnliche/gleiche Ergebnisse bei ähnlichen/gleichen Problemen
+    * geringer Bias: -> nah an der Wahrheit
+    * Bias/Verzerrung: Eine falsche Schätzung der Modellparameter, so dass sie nicht die tatsächliche Verteilung der Stichprobendaten widerspiegeln. ([2] S. 211, Übersetzt mit DeepL)
+    * Varianz: Die Varianz der Vorhersage, die entsteht, wenn das Modell die Verteilung der Trainingsdaten gut wiedergibt, aber die Generalisierung auf neue Daten leidet. ([2] S. 211, Übersetzt mit DeepL)
+    * Overfitting:  Das Modell folgt der Verteilung der Trainingsdaten in einem Maße, das seine Genauigkeit bei neuen Daten verringert. ([2] S. 211, Übersetzt mit DeepL)
+    * Underfitting: Das Modell spiegelt die Verteilung der Trainingsdaten nicht angemessen wieder. ([2] S. 211, Übersetzt mit DeepL)
+    * Random Forest 211ff
+      * begging (hoffen das es klappt?)
+      * weak Learners (WL)
+      * sehr simple
+      * Entscheidung aufgrund einer Teilmenge der Merkmale
+      * Trainiert mit Teil-Trainings-Sets
+      * Weak Learners = decision Trees
+      * Abstimmung entscheidet das finale Ergebnis
+    * AdaBoost S, 215
+      * boosting
+      * Kaskade einfacher Klassifikationsmodelle
+      * random Subset of Trainingdata -> trainiere ersten WL -> neues Trainingsset (ein Teil zufällig, ein Teil, wo erster WL schlecht war) -> 2. WL training -> ...
+  * Neural Networks [2] S. 215
+    * an Gehirn angelehnt
+    * 2 Mechanismen
+      * 1. Vereinigen von vielen Eingaben 
+      * 2. eine nicht lineare interne Ausgabefunktion
+    * Eingaben gewichtet
+    * gewichtete Eingaben summiert (+ Bias)
+    * -> kontinuierliches Mappen & Klassifizieren
+    * Lernen = Anpassen von Weights und Bias
+    * aneinanderhängen und Schichten aufbauen -> artifical neural network (ANN)
+    * ein Input Layer
+    * n Hidden Layer
+    * ein Output Layer
+  * Unsupervised Learning - Lernen ohne Labels [2] S. 218
+    * Strukturen erkennen -> Beziehungen/Gruppierungen
+    * Clustering
+      * "einfachste Struktur" ([2] S. 218)
+      * Cluster mit höherer internen Ähnlichkeiten
+      * verschiedene Ähnlickeitsermittlungen (zB. Euklidische Distanz)
+      * k-mean-Cluster -> zufällige Aufteilung von Punkten in einzelne Cluster -> die sich ähnlichsten Cluster zusammenfassen + neuer Durchschnittswert für weitere Rechnung -> Schritt 2 ...
+    * Manifolding Learning
+      * kein zwingendes Clustern
+      * erstellen einer Metrik um Beziehungen darzustellen
+      * Metrik notwendig für k-mean-Clustering
+      * Metrik zB Euklidische Distanz
+      * Metriken können unterschiedlich sein
+    * Generative Modelle
+      * Modelle, welche realistische Daten erstellen können
+      * eine unterliegende, aber nicht beobachtbare Verteilung
+      * explizites Dichtemodell schätzt diese zugrundeliegende Verteilung (Gaußschen Mischungsmodell (GMM))
+      * implizites Dichtemodell: Beispiele ersetllen, welche nicht mehr von testdaten unterscheidbar sind
+  * Reinforcement Learning [2] S. 221
+    * keine Trainingsdaten notwendig
+    * kreiert einge Trainingsdaten durch Interaktion mit Umfeld
+    * Belohnung für gute Ergebnisse
+    * Bestrafung für schlechte Ergebnisse
+    * learning by doing
+    * Agent = ein Individuum, ein Modell
+    * Agent Bewegung in Zeitsteps
+    * Agent hat Zustand und Aktionspalette
+    * je nach Zustand muss eine Aktion ausgewählt werden
+    * Neuer Zustand basiert auf Aktion und Umgebungseinfluss
+    * Sammeln von Belohnungen um die größtmögliche Belohnung zu erhalten
+    * Verhältnis exploration und exploitation
+
+#### DL
+* Deep Learning (DL) Teilgebiet ML [5] S. 18
+
 * Neuronale Netze [5] S. 67-106
   * Aus künstlichen Neuronen aufgebaut (wie Gehirn)
   * mehrere Neuronen-Schichten
@@ -497,49 +847,546 @@ Aufbau der Arbeit
       * Generator erzeugt neue Daten auf Basis des vorliegenden Datensets
       * Diskriminator prüft in Echtzeit, ob neue Daten zum trainingsset passen
     * weiter hier: https://www.asimovinstitute.org/neural-network-zoo/
+* Neural Network (DL) [2]
+    * 2010 hoch -> Rechenpower + Graphikkarten eigenen sich gut, Verfügbare Daten, Algorithmen haben einen Durchbruch gehabt
+    * CNN [2] S. 224f
+      * Mehrschichtig
+      * viele Verbindungen ausgelassen -> Filtern der Eingabe
+      * häufiges Filtern und Gewichten
+      * Filter werden über das gesamte Netz wiederverwendet
+      * Nachbarschaft ist wichitg -> Input Filter nur zu wenigen anderen Verbunden
+      * Reduktion der Möglichkeiten
+      * Viele Schichten welche selbst simpel sind -> ähnlich zu Bagging 
+    * Recurrent Neural Networks (RNN)
+      * für sequenzielle Daten
+      * Input + Hidden + Output
+      * Eingabe + Aktueller Zustand des Netzwerkes = Ausgabe
+      * gut für Kontext
+      * Nutzen von Short-Term-Memory und Long-Term-Memory [2] S. 228f
+        * nicht nur alten Status als Input
+        * auch alten Output
+        * auch aktuellen Input
+        * alles in sich gewichtbar
+    * Autoencoder
+      * mehrerer Verschlüsselungsschichten (encoder-Layers)
+      * Input wird zu niedrig Dimensionalen Repräsentation
+      * Decoder "entschlüsselt" Repräsentation
+      * Training = Differenz von Input und Entschlüsseltem Output minimieren
+      * Fehlerfunktion während des Lernens anpassen (nicht nur beim Autoencoder)
+    * Generative Adversarial Networks (GAN)
+      * Generiert Daten ununterscheidbar von echten Daten
+      * Input = sampling Vector
+      * deconvolution & upscaling
+      * Discriminator -> Versucht zu erkennen, was echt und was falsch ist (Benötigt echte und gefakte Trainingsdaten)
+      * steigern sich beide
+      * mode collapse -> nur noch wenige Beispiele 
+      * Catch me if you can -> ein Beispiel solange bis es erkannt wird, dann nächstes Beispiel
+      * mgl. statt korrekt und falsch -> einen Kritikwert
 
-## Marktschau
-* Verschiedene Tools raussuchen
-* Demos erhalten und bewerten
-* Theoretische Grundlagen zum Tool darstellen
-* Vorteile/Nachteile herausfiltern
-* Einsatzmöglichkeiten aufzeigen
-* Tool(s) für Java raussuchen/entscheiden -> Proof-of-Concept
-* Tool(s) für Angular raussuchen/entscheiden -> Proof-of-Concept
-* Bewertung/Beurteilung der aktuellen Marktlage
-* Weiterentwicklungsaussichten
+#### Algorithmen
 
-1. test.ai -> https://test.ai/all-products
-2. mabl -> https://www.mabl.com/
-3. IAV -> https://www.iav.com/was-uns-bewegt/mit-kuenstlicher-intelligenz-softwaretests-schneller-automatisieren/
-4. symflower -> https://symflower.com/en/
-5. applitools -> https://applitools.com/
+## Testen mit KI
+* Testen mit KI
+   * GUI analysieren
+   * Testfälle abschätzen, 
+   * Automatische Wartung einiger Skripte
+   * Optische Veränderungen aufzeigen
+   * Testberichte
+   * Auswahl und Priorisierung von Regressionstestfällen
+* Spidering AI [1/3]
+   * Automatisierte Generierung von Testfällen durch "Spidering"
+   * Crawled Anwendungsdaten
+      * Screenshots
+      * HTML-Code-Download
+      * Ladezeitenmessung
+   * Wiederholung um KI zu trainieren
+   * bei signifikaten Änderungen (zB. Ladezeit) Error/potentielles Problem
+   * Mensch muss Probleme betrachten
+* Visual Validation Automation Testing [1/3]
+   * Richtige Daten am Frontend 
+   * Erscheinungsbild gesamt und einzelnelemente werden validiert
+   * vergleicht aktuelle Screenshots mit originalen Screenshotes
+* API-Test [1/3]
+   * hohe Testabdeckung
+   * geringe Komplexität
+   * Testgenerierung 
+* AI [33]
+    * Probleme Automatisiertes Testen [33]
+      * Tests brechen schnell
+      * Wartung der Tests
+      * Entwicklung der Tests (Zeitaufwand)
+      * nur Teilweise "Autonom"
+      * Regression-Test-Set
+        * jedes Release
+        * vergangene behobene Fehlverhalten kehren nicht zurück
+      * Neue-Features-Test-Set
+      * Test-Phase zu kurz -> welche Tests/Verzögerung -> erhöhtes Risiko
+    * Daten konsumieren -> ML -> optimales Testset
+    
+    * vollautonome KI -> kein/wenig Kontext, keine Emotionen, kein Wissen
+    * Matrix Autonomes Test-Ausführen (ex) <-> Autonomes Test-Auswählen (sel)
+      * high ex - high sel
+        * Auwahl Tests
+        * vollständige Automatiserung von Testgenerierung bis Testausführung
+        * geringe Kosten
+        * umfangereiches Reporting
+      * low ex - high sel
+        * Auswahl Tests
+        * wenige notwendige Testdaten
+        * keine Testausführung
+        * Weniger Tester-Input notwendig
+        * Umfangreiche weitere Testautomatisierung notwendig -> hohe Wartungskosten
+        * umfangreiches Reporting
+      * low ex - low sel
+        * "Identify weak areas to test"
+        * keine Testauswahl
+        * keine Testausführung -> weitere Testautomatisierung notwendig
+        * viel manueller Input
+        * hohe Wartungskosten
+      * high ex - low sel
+        * Identifizieren von Bereichen zum konzentrieren
+        * wenige vorher bestimmte Tests
+        * von Generierung bis Ausführung
+        * Umfangreiche, automatische Reports 
+    * Testauswahl
+      * vorher definierte Tests
+      * hilft Testsmanager
+      * hoher Enwicklungsaufwand für Testgenerierung
+    * Testausführung
+      * benötigt Trainingsdaten
+      * hilt Testengineer
+      * Selbstheilende Tests
+      * sehr Trainingsdatenbasiert
+      * Risiko Fehler zu heilen
+    * Automation Intelligence
+      * Entscheidung welcher Applikationsbereich getestet werden muss
+      * Input-Daten = Daten aus verschiedenen Algorithmen
+      * Betrachten der 
+        * Fehlerhistorie
+        * Anwendungsänderungen
+        * Testcoverage Historie
+* Testen mit KI [13]
+  * Produktqualität nach ISO2510
+    * Funktionale Eignung
+    * Leistungseffizients
+    * Kompatibilität
+    * Gebrauchstauglichkeit
+    * Zuverlässigkeit
+    * Informationssicherheit
+    * Wartbarkeit
+    * Übertragbarkeit
+    * *Intelligentes Verhalten* -> Sogetis
+      * Lernfähigkeit
+        * mit Regeln
+        * mit Daten und Deuten dieser
+        * mit Imitieren von anderen
+        * => Verstehen und Erfahrungen nutzen
+      * Improvisation
+        * Anpassung an neue Situationen
+        * Schnelle Interpretation der Daten
+        * Anpassen des eigenen Verhaltens
+      * Transparenz
+        * Nachvollziehbar durch Menschen
+        * welche Datenpunkte sind entscheident
+      * Zusammenarbeit
+        * Mensch-Roboter-Interaktionen
+        * Kommunikation
+      * Natürliche Interaktion
+        * Kommunikation
+        * Art und Weise der Kommunikation
+    * *Moral* -> Sogetis
+      * gutes/schlechtes Verhalten
+      * Asimovs Gesetze?
+      * Ethik
+        * nach Prinzipien handeln
+        * Basis:
+          * Gesetze
+          * Regeln
+          * Vorschriften
+          * moralische Werte
+      * Privatsphäre
+        * Schutz der Privatsphäre
+      * Freundlichkeit zu Menschen
+        * Mensch kein Schaden zufügen
+        * Vorteil für menschliche Gemeinschaft
+    * *Persönlichkeit* -> Sogetis
+      * Stimmung
+        * Anpassung der Stimmung an die Umgebung
+        * grundsätzlich positiv
+      * Empathie
+        * Emphatie simulieren
+        * Emotionen erkennen + entsprechend reagieren
+      * Humor
+        * heitere Gelassenheit
+        * erkennen von Humor
+        * später Nutzen von Humor
+      * Charisma
+        * ? sehe ich persönlich nicht so
+  * Nutzungsqualität nach ISO2510
+    * Effektivität
+    * Effizienz
+    * Zufriedenheit
+    * Risikofreiheit
+    * Kontextabdeckung
+  * Qualitätsmerkmale -> Kennzahlen -> Tests
+  * Testen - Zeiträume
+    * klassisches Testen - Monate
+    * agiles Testen - Wochen
+    * kontinuierliches Testen - Tage
+    * Digitales Testen - Minuten
+  * Testgenerierung durch evolutionäre Algorithmen
+  * Durchführung
+  * Überwachung
+  * Prognose
+    * Vorhersage von Fehlern/Fehlverhalten
+    * Voraussetzungen:
+      * Generierte Tests (Modelbased Testing, Digitaler Zwilling)
+      * automatisierte Testausführung
+      * Datensammlung in Echtzeit
+    * viele Modelle -> viele Ergebnisse
+    * Ergebnissmenge manuell Interpretieren
+* AI im Software Tests [24]
+  * Reduzierung Time2Market
+  * besserers Automatisiertes Testen
+  * mehr vollgetestete Software
+  * 2 Testtypen
+    * manuelles Testen
+      * Tester selbst überprüft
+      * keine extra Tools
+    * Automatisiertes Testen
+      * erstellen von Skripts
+      * Software testet Software
+  * Requirement Analysis -> Testplanning -> Test Development-> Test Execution -> Evaluation exit criteria -> Test Closure -> von vorn
+  * Teststages:
+    * development testing
+      * Unit Tests -> Funktionalitätstest, Konzentration auf eine Funktion/Klasse
+      * Component Tests -> Software-Einheiten zusammenführen und Testen, Fokus auf Komponenten-Interfaces
+      * System Tests -> Zusammenführung Software verschiedener Teams
+    * Release Testing
+      * Requirement Testing -> für jede Vorgabe => Testfall
+      * Scenario Testing -> Nutzerverhalten nachstellen und Testfälle entsprechend generieren
+      * Performance Testing -> Vorgegebene Last aushalten
+    * User Testing
+      * Apha Testing -> Tests in der Testumgebung
+      * Beta Testing -> Tests in der Nutzerumgebung
+      * Acceptance Testing -> Tests durch Nutzer
+  * Vereinfachung -> schnellere Testfallgenerierung
+  * Kategorien von ML
+    * Arbeitsweise
+    * Mathematische/statistische Modelle
+    * Annahmen
+    * Characteristiken
+    * Genauigkeit
+    * Lösungskategorien
+  * MELBA
+    * MachinE Learning based on BlAckbox test specification
+    * ML basierend auf Blackbox Testspezifikationen
+    * teilautomatisiierter, iterativer Algorithmus basierend auf C4.5 {? was ist C4.5}
+    * C4.5 generiert Entscheidungsbäume
+    * höhere Fehlererkennung
+    * leicht höherer Testfälle
+    * [[4]]
+  * Merkmalsextraktion für Modellgenerierung
+    * welche Merkmale sind wichtig
+    * Daten von automatisierten Tools
+    * SVR (Algorithmus) ist genauste
+    * [[5]]
+  * GUI Testing mit AI
+    * HGA (hybrid genetic Algorithm)
+    * Optimierung: Test-Sequenz-Optimierung + Testfall-Optimierung
+    * [[6,7]]
+  * Testfallklassifizierung
+    * k-means Clustering
+    * Statement Coverage Criterion -> am wichtigsten
+  * Testfall-Durchführbarkeit vorhersagbar [[10]]
+  * Änderungsanfälligkeit vorhersagen
+    * [[13]] 
+## Tools
 
+### test.ai
 
-## Fazit
-* Zusammenfassen
-* Fazit ziehen
-* Ausblicke geben
+* test.ai [19]
+  * Tool erforscht selbst die Anwendung
+  * interagiert automatisch mit der Anwendung
+  * erkennt Zustände, Elemente und Wege
+  * Benennung von Zuständen und Elementen
+  * überprüft alle Features
+  * generierung von KI-baiserten Modellen zur Erkennung von Zuständen u. Elementen u. automatischer Navigation
+  * erforscht die Anwendung im Test, um neue Bereiche zu finden
+  * Test-Creation
+    * ML
+    * visuelles Wiederfinden von Elementen
+    * Test-Composer -> Test-Bot beaufsichtigen und steuern
+    * Test in Echtzeit erstellen
+  * hochskalierbar
+  * Optische Ergebnis-Aufbereitung
+* test.ai
+  * Elemente müssen nicht mehr explizit angegeben werden, sondern werden überr ML erkannt
+  * kein XPath, CSS, ...
+  * Screenshots bei jedem Schritt
+  * Schritte sind auf dem Screenshot hervorgehoben
+  * reinforcement learning
+  * Python-Skripte mgl.
+  * Human-Interface
+    * Bot Training -> Interfaces benennen
+    * Test Spezifikation
+    * Bot Configuration
+    * Analytics
+    * Knowledge Base
+  * Application Interaktion
+    * Exploration
+    * Test-Ausführung
+  * Cortex: ML Brain
+    * Objekt Lokalisierung
+    * Objekt Klassifizierung
+    * Lernen
+  * Device Interaktion
+    * Sensoren -> Objekt Modell, Bildaufnahme, Videoaufnahme
+    * Aktoren -> Maus, Tastatur, Touch, Gamepad
+  * Supportet Plattforms
+    * Laptop, Computer, Mobile, Apple, Android, PS4, XBox, Switch
+* test.ai [21]
+  * Workflow
+    * Collect Data
+    * Classify Data
+    * Train AI
+    * Create Tests
+    * Run Tests
+    * Review Results
+  * AI-Usage
+    * Crawl UI -> UI durchsuchen/Browsen
+      * Q-Learning
+      * Lernen zu navigieren von Seite zu Seite
+      * Erstellen eines App-Graphen -> Finden des besten Weges oder eines Ersatzweges
+    * sehende Roboter
+      * keine Element-Pfade/-Locators
+      * Visual Detection um Elemente zu erkennen
+      * erkannte Elemente müssen dann benannt werden (vom Tester)
+      * Neuronales Netz wird dann darauf trainiert
+      * Bots können menschliche Interaktionen nachstellen
+      * desto größer die Unterschiede beim Training, desto allgemeiner wird die KI
+    * Objektklassifizierung
+      * Nutzen von bekannten Icons/Buttons allgemein
+      * Nutzen von speziell für die eine App trainierte Buttons
+* download von test.ai zurzeit scheinbar nicht mgl. 
 
-## Literaturverzeichnis
+### mabl
+
+* mabl [22]
+  * Workspace
+    * Oberfläche des Testers
+    * vereint alle weiteren Punkte in sich
+    * jeder Entwickler hat eigenen Workspace
+    * ein Workspace mit vielen Enviorments
+    * Dashboard
+      * 'status-check'
+      * aktuelle Nutzungszahlen
+      * Navigation zu anderen Komponenten
+  * Enviroment
+    * Umgebungen
+    * Test, Abnahme, Produktion, ...
+    * kann Umgebungsvariablen nutzen
+    * Umgebungsvariablen von allen Tests der Umgebung nutzbar
+  * Application
+    * dargestellt mit ihren URLs
+    * Eine Applikation kann merheren Umgebungen zugeordnet werden
+    * in Configuration erstellbar
+  * Plan
+    * mehrere Tests für einen Bereich der App
+    * gibt an, wie automatisiert werden soll
+    * ein Plan hat nur eine App
+    * eine App hat mehrere Pläne
+  * Test
+    * Menge von Schritten um eine Funktionalität zu definieren
+    * für kleine Bereiche/einzelne Features
+    * Ein Test kann zu mehreren Plänen gehören
+    * Im Test-Bereich
+      * Details: Einzelschritte
+      * Verlauf
+      * zugeordnete Plänge
+      * Testveränderung im Laufe der Zeit
+  * Test Result -> viele Informationen
+  * Elemtsuche
+    * Standart
+      * Element auswählen
+      * Informationen darüber sammeln
+      * Beim Test Element mit bester Übereinstimmung
+    * Konfigurierte
+      * einstellbar, welche Attribute am wichtigsten sind
+      * Suchstrategie veränderlich
+    * warten und warten
+      * Es kann gewartet werden 
+      * statische Zeitspanne gewartet
+      * warten bis ein Element ein gewisses Attribut hat
+    * Pfad-Selektoren
+      * CSS, XPath
+      * zusätzliche Kontrolle
+      * keine Selbstheilung
+    * Vorteile: 
+      * Selbstheilung
+      * Änderungsrobust
+      * Vielseitig
+  * Selbstheilung
+    * Bei jeder Interaktion mit Element -> Speichern der Attribute fürs nächste Finden
+    * über 30 Attribute
+    * Finden: suche das ähnlichste Element
+    * Suche: 1. Kandidaten raussuche -> bester Kandidat
+    * Erstmal warten wenn nichts gefunden wurde
+    * Wenn kein eindeutiger Kandidat gefunden wurde -> Ausprobieren -> Erfolg: Test pass, überschreiben der Infos <-> Misserfolg: Test error, Autoheal versuch in Log, Fehlerzeigen
+    * Ad-hocs tests verändern keine gespeicherten Informationen
+
+### IAV
+* IAV [28]
+  * übernimmt automatisiert die Erstellung von Testskripten aus manuellen Testbeschreibungen
+  * Teil eines Modularen Baukastens
+  * Automatierung nicht leicht -> Expertenwissen + Programmierkenntnisse
+  * Permanente Testanpassungen
+  * lernen aus bekannten Testfallbeschreibung-Skript-Tupels
+  * Bestimmung vieler UI-Elemente aus Testbeschreibung
+  * Problem: Tippfehler, Multi-Label, ...
+  * Effizienz von Testern steigern, nicht ersetzen
+  
+### Symflower
+* Symflower [29]
+  * Integration in den Workflow
+  * generierung "high-coverage" Unit-Tests
+  * IDEs
+    * IntelliJ
+    * Visual Studio Code
+    * Goland
+    * Android Studio
+    * CLI
+  * Echtzeit Rückmeldungen
+  * Languages
+    * Go
+    * Java
+  * keine Integrations-/Systemstests
+* Symflower [15]
+  * Autonomes Testen
+    * -> höhere Qualität
+    * -> Mitarbeiterentlastung
+    * -> Kostenreduzierung
+  * automatisierte Unit-Test-Erstellung
+  * erstellte Tests -> aktuelle Funktion der Methoden
+  * Regressionstests/Refactortests automatisch gegeben
+  * bei neuen "push" in Reporitory
+  
+### Applitools
+* applitools [30]
+  * Visual AI
+  * more Productive
+  * higher Testcoverage
+  * Support 50 SDK
+  * Take Screenshot -> Vergleich nach Kontrolle, keine UI-Elemente mehr zugreifen
+  
+* Eggplant software [31]
+  * verschiedene Bereiche
+    * Performance [32]
+    * ...
+  * Nutzen des Digital Twin Sufaces [33]
+    * Zustände und Aktionen
+    * Übergänge
+    * durch Modell
+    * Alle Möglichen Pfade
+  * optimieren der Performance
+  * schnellere Tests
+  * Verbindung Testen + Monitoring
+  * Nutzer-Bewegungen analysieren
+  * automatisches Erstellen eines Modelles der Webseite [31]
+    * Interaktives Erstellen [33]
+    * Model-Erstellung durch existierende Dateien (Gherkin) [33]
+    * Model-Erstellung durch echte Kunden [33]
+    * Intelligentes Anwendungsschaben (Durcharbeiten der Webseite) [33]
+  * Intelligente Testplanung
+  * Intelligent Computer Vision
+    * verschiedene Browser/Geräte = verschiedene Ergebnisse
+    * DOM-Modell
+    * verschiedene Auflösung, Schriftgröße, Farben
+    * Objekte im Laufe der Entwicklung verändert
+    * Optical Character Extraction (OCE) -> vereinfachung automatisierten Testens
+  * Universal Fusion Engine
+    * identifies, executes and adapts test models automatically
+  * API-Bewertung
+    * Vergleich Frontendangaben mit Backend-Ausgaben
+  * Jede Plattform
+    * alle Browser
+    * alle OS
+    * alle Geräte
+  * Model Based Testing
+    * App-Verhaltensvorhersage
+    * genauere/zuverlässigere Tests
+  * CI/CD Integration Adapters
+    * schnelleres Testfall erstellen
+  * Performance Test [32]
+    * Erstellen von Skripten
+    * Auto-Generierungen von Skripten
+      * Data Collection + Aufzeichnung
+      * Szenario einmal durchspielen
+      * Aufzeichnung Netzwerk (Sessions, Cookies, dynamic forms, asynchrone Kommunikation, mobile Endgeräte, Sicherheit => Probleme) 
+    * Test-Ausführung -> Aufzeichnen der Performance/Anpassen von Parameter in Echtzeit
+    * Workflow -> Az. User, Abfolge
+    * mehr als 100 000 virtueller Nutzer mgl.
+      * Nutzer durch Injektoren angelegt
+      * Beliebig viele Injektoren
+      * Injektoren in verschiedenen Ländern möglich
+      * führen Eggplant (o.a. virtuell-User-Skripte) aus -> End-zu-End-Tests
+* verbessert Menschen statt ersetzen [33]
+* Erstellen der Tests
+        * Aus Modell heraus
+        * alle mgl. Pfade bekannt
+        * Auswahl Regressionstests
+        * "AI Bug Hunting" [33] Abb. S. 9
+        * Testabdeckungsanalyse
+        * Echte Nutzer Verhalten
+        * Änderungs- und Fehlermonitoring
+      * Ausführen der Tests
+        * Digitaler Zwilling
+        * Codeschnippsel für Übergänge
+          * einfachere Wartung -> eine Änderung = Update vieler Scripts
+          * schnellere Testfall-Generierung -> vielfälltige Tests, Entscheidungsbasierte Algorithmen
+          * größere Flexibilität -> Wiederverwendbarkeit, 
+        * Zusammensetzen der Schnippsel für Script
+        * 
+      * Report
+      * braucht keine guten Trainingsdaten (clean)
+      * keine schlechten Tests
+      * robuste Tests
+      * keine menschliche Eingabe
+
+# Potentielle Literatur
 
 |Quellnummer|Autor|Erscheinungs-datum|Titel|Themen-bereich|Link/Quelle|Downloaded|Durchgearbeitet|
 |-|-|-|-|-|-|-|-|
-|[1]|SwissQ|-|KI-unterstütztes Testen: Mythen und Fakten zur künstlichen Intelligenz|Allgemein| https://swissq.it/news/ki-unterstuetztes-testen-mythen-und-fakten-zur-kuenstlichen-intelligenz/ [1/1]-  https://swissq.it/management/ki-gesteuerte-software-und-systeme-im-taeglichen-einsatz-teil-2-von-5/ [1/2]- https://swissq.it/news/software-testing-mit-kuenstlicher-intelligenz-eine-marktbetrachtung-teil-3-von-5/ [1/3] - https://swissq.it/testing/ki-gesteuerte-software-meets-testing-etwas-ganz-neues-oder-business-as-usual-teil-4-von-5/ [1/4] - https://swissq.it/testing/ki-gesteuerte-software-testing-gegen-bias-und-drift/ [1/5]
-|[2]|Papp, Stefan & Weidinger, Wolfgang & Munro, Katherine|2022|The handbook of data science and AI : generate value from data with machine learning and data analytics|KI|DHBW UniBibo / https://www.hanser-elibrary.com/doi/book/10.3139/9781569908877|
+|[1]|SwissQ|-|KI-unterstütztes Testen: Mythen und Fakten zur künstlichen Intelligenz|Allgemein| https://swissq.it/news/ki-unterstuetztes-testen-mythen-und-fakten-zur-kuenstlichen-intelligenz/ [1/1]-  https://swissq.it/management/ki-gesteuerte-software-und-systeme-im-taeglichen-einsatz-teil-2-von-5/ [1/2]- https://swissq.it/news/software-testing-mit-kuenstlicher-intelligenz-eine-marktbetrachtung-teil-3-von-5/ [1/3] - https://swissq.it/testing/ki-gesteuerte-software-meets-testing-etwas-ganz-neues-oder-business-as-usual-teil-4-von-5/ [1/4] - https://swissq.it/testing/ki-gesteuerte-software-testing-gegen-bias-und-drift/ [1/5]|yes|yes|
+|[2]|Papp, Stefan & Weidinger, Wolfgang & Munro, Katherine|2022|The handbook of data science and AI : generate value from data with machine learning and data analytics|KI|DHBW UniBibo / https://www.hanser-elibrary.com/doi/book/10.3139/9781569908877|yes|no|
 |[3]|Stanislas Chaillou|2022|Artificial intelligence and architecture : from research to practice|KI| DHBW UniBibo / https://www.degruyter.com/document/doi/10.1515/9783035624045/html |yes|no|
 |[4]|Umberto Michelucci|2022|Applied Deep Learning with TensorFlow 2 : Learn to Implement Advanced Deep Learning Techniques with Python|KI|DHBW UniBibo / https://link.springer.com/book/10.1007/978-1-4842-8020-1 |yes|no|
-|[5]|Matthieu Deru & Alassane Ndiaye|2020|Deep Learning mit TensorFlow, Keras und TensorFlow.js|KI|Zuhause|
-|[6] - Vielleicht|Ian Goodfellow, Yoshua Bengio und Aaron Courville|2018|Deep Learning Das umfassende Handbuch|KI|- (noch nicht gefunden)|
-|[7]| Francois Chollet|2018|Deep Learning mit Python und Keras: Das Praxis-Handbuch vom Entwickler der Keras-Bibliothek|KI|- (nur empfohlen, nicht online gefunden bisher)|
+|[5]|Matthieu Deru & Alassane Ndiaye|2020|Deep Learning mit TensorFlow, Keras und TensorFlow.js|KI|Zuhause|-|yes|
+|[6] - Vielleicht|Ian Goodfellow, Yoshua Bengio und Aaron Courville|2018|Deep Learning Das umfassende Handbuch|KI|Mosbach vorort|no|no|
+|[7]| Francois Chollet|2018|Deep Learning mit Python und Keras: Das Praxis-Handbuch vom Entwickler der Keras-Bibliothek|KI|Mosbach vorort|no|no|
 |[8]|Peter Liggesmeyer|2. Aufl. 2009|Software-Qualität : Testen, Analysieren und Verifizieren von Software|Test|DHBW UniBibo / DNB|yes|no|
-|[9]|Baumgartner, Manfred &Gwihs, Stefan & Seidl, Richard & Steirer, Thomas & Wendland, Marc-Florian|3., aktualisierte und überarbeitete Auflage 2021| 	Basiswissen Testautomatisierung : Aus- und Weiterbildung zum ISTQB Advanced Level Specialist – Certified Test Automation Engineer | Test | DNB |
+|[9]|Baumgartner, Manfred &Gwihs, Stefan & Seidl, Richard & Steirer, Thomas & Wendland, Marc-Florian|3., aktualisierte und überarbeitete Auflage 2021| 	Basiswissen Testautomatisierung : Aus- und Weiterbildung zum ISTQB Advanced Level Specialist – Certified Test Automation Engineer | Test | Mosbach vorort |no|no|
 |[10]|Witte, Frank|2020| Strategie, Planung und Organisation von Testprozessen : Basis für erfolgreiche Projektabwicklung im Softwaretest|Test/bisschen KI|DNB|yes|no|
-|[11]|Stephan Kleuker|2019|Qualitätssicherung durch Softwaretests : Vorgehensweisen und Werkzeuge zum Testen von Java-Programmen | Test  | DNB|yes|no
+|[11]|Stephan Kleuker|2019|Qualitätssicherung durch Softwaretests : Vorgehensweisen und Werkzeuge zum Testen von Java-Programmen | Test  | DNB|yes|no|
 |[12]|Witte, Frank|2018| 	Metriken für das Testreporting : Analyse und Reporting für wirkungsvolles Testmanagement | Test | DNB|yes|no
-|[13]|Rik Marselis|? (min. 2018)|Testen von und mit KI|Test/KI|https://www.sigs-datacom.de/trendletter/2020-18/8-testen-von-und-mit-ki|
-|[14]|it-daily.net|2019|Neue Testing-Methode für Künstliche Intelligenz|Test/KI|https://www.it-daily.net/it-management/business-software/neue-testing-methode-fuer-kuenstliche-intelligenz|
-|[15]| Dipl. -Ing. Thomas Drilling / Stephan Augsten|2021|Qualitätssicherung mit Unit und Behaviour Testing Automatisierte Software-Tests mit KI |Test/KI|https://www.dev-insider.de/automatisierte-software-tests-mit-ki-a-1009622/|
-|[16]|Hussam Hourani; Ahmad Hammad; Mohammad Lafi|2019|The Impact of Artificial Intelligence on Software Testing|Test/KI|https://ieeexplore.ieee.org/abstract/document/8717439|
-|[17]|Josip Bozic; Oliver A. Tazl; Franz Wotawa|2019|Chatbot Testing Using AI Planning|Test/KI/Example| https://ieeexplore.ieee.org/abstract/document/8718222 |
-|[18]|Witte, Frank|2016 |Testmanagement und Softwaretest Theoretische Grundlagen und praktische Umsetzung| Test|Uni|yes|
+|[13]|Rik Marselis|? (min. 2018)|Testen von und mit KI|Test/KI|https://www.sigs-datacom.de/trendletter/2020-18/8-testen-von-und-mit-ki|yes|no|
+|[14]|it-daily.net|2019|Neue Testing-Methode für Künstliche Intelligenz|Test/KI|https://www.it-daily.net/it-management/business-software/neue-testing-methode-fuer-kuenstliche-intelligenz|yes|no|
+|[15]| Dipl. -Ing. Thomas Drilling / Stephan Augsten|2021|Qualitätssicherung mit Unit und Behaviour Testing Automatisierte Software-Tests mit KI |Test/KI|https://www.dev-insider.de/automatisierte-software-tests-mit-ki-a-1009622/|yes|no|
+|[16] <=> [24]|Hussam Hourani; Ahmad Hammad; Mohammad Lafi|2019|The Impact of Artificial Intelligence on Software Testing|Test/KI|https://ieeexplore.ieee.org/abstract/document/8717439, aber kein Zugriff auf pdf for free|-|-|
+|[17]|Josip Bozic; Oliver A. Tazl; Franz Wotawa|2019|Chatbot Testing Using AI Planning|Test/KI/Example| https://ieeexplore.ieee.org/abstract/document/8718222  aber kein Zugriff auf pdf for free|no|no|
+|[18]|Witte, Frank|2016 |Testmanagement und Softwaretest Theoretische Grundlagen und praktische Umsetzung| Test|Uni|yes|no|
+|[19]|test.ai|2022|Test.ai Platform|Tool|https://test.ai/all-products [Zugriff: 30.06.2022]|no|yes|
+|[20]|test.ai|2020|Test.ai Platform|Tool|https://static1.squarespace.com/static/61c565d1f94e5e0edb1471f3/t/61e85f5d0cbdf50a0c2def8c/1642618717726/testai_DataSheet_v4.0.pdf [Zugriff: 6:34]|no|yes|
+|[21]|test.ai|2021|Test.ai Docs|Tool|https://docs.test.ai/ [Zugriff: 30.06.2022]|no|yes|
+|[22]|mabl|2022|Mabl University|Tool|https://www.mabl.com/university [Zugriff: 30.06.2022]|no|no|
+|[23]|mabl|2022|Mabl Dokumentation|Tool|https://help.mabl.com/ [Zugriff: 30.06.2022]|no|no|
+|[24]|Hussam Hourani, Ahmad Hammad, Mohammad Lafi|2019|The Impact of Artificial Intelligence on Software Testing|Paper|yes|no|
+|[25]|Zubair Khaliqa, Sheikh Umar Farooqa, Dawood Ashraf Khana|2022|Artificial Intelligence in Software Testing : Impact, Problems, Challenges and Prospect|Paper|yes|no|
+|[26]|Wolfgang Ertel|2016 (4. Auflage)|Grundkurs Künstliche Intelligenz Eine praxisorientierte Einführung|DHBW Uni|yes|no|
+|[27]|Gerhard Paaß, Dirk Hecker| 2020|Künstliche Intelligenz Was steckt hinter der Technologie der Zukunft|DHBW Uni|yes|no|
+|[28]|IAV|2020|Mit Künstlicher Intelligenz Softwaretests schneller automatisieren|https://www.iav.com/was-uns-bewegt/mit-kuenstlicher-intelligenz-softwaretests-schneller-automatisieren/ [Zugriff: 06.07.2022]|yes|yes|
+[29]|Symflower GmbH|2022|Symflower|https://symflower.com/en/[Zugriff: 06.07.2022]|yes|Website yes; Tool tested no|
+|[30]|Applitools|2022|Next generation test automation platform powered by Visual AI|https://applitools.com/ [Zugriff: 07.07.2022]|no|no
+|[31]|Eggplant|2022|Eggplant Test|https://www.eggplantsoftware.com/products/test-automation-intelligence [Zugriff: 07.07.2022|no|nos|
+|[32]|Keysight Technologies| 2021|Eggplant Performance|-|yes|yes|
+|[33]|Keysight Technologies| 2021|The Ultimate AI Testing Playbook|-|yes|yes|
